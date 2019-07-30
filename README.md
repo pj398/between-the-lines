@@ -1,6 +1,5 @@
 # Between the Lines
 ## Pete Jones
----
 ### A repository for sharing data, tools and info related to my research on using character interaction networks to examine gendered character positions in popular film narratives.
   
 For the last few years I've been manually collecting directed dialogue network data from popular films in order to explore what a network-based approach can add to our understanding of the narrative marginalisation of women in mainstream Hollywood cinema. To date, the only visible output of my research is [a paper I published in *Feminist Media Studies*](https://doi.org/10.1080/14680777.2018.1510846) analysing the distribution of dialogue in the film *Wonder Woman* (2017). That paper serves as a nice intro to my research, but doesn't provide any data or reproducible code.
@@ -17,13 +16,11 @@ Next steps:
 
 Stay tuned and let me know if I can be of any help.
 
-### License
----
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-
-### Contact
----
+## Contact
 
 E-mail: petejones398@gmail.com  
 Twitter: [@pj_mcr](https://twitter.com/pj_mcr)
+
+## License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
