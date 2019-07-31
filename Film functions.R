@@ -105,11 +105,11 @@ plot.film.basic <- function(nodelist=chars, my.adj=adj, filmtitle="",
   # Plot the network
   plot(filmnet, label=nodelist$character.name, edge.col='lightpink1', 
        vertex.cex=sqrt(nodelist$nlines)/3, label.pos=3, arrowhead.cex=0.7,
-       vertex.col=ifelse(nodelist$charfem==1, "#DECA49", "navy"), 
-       label.cex=0.7, main=paste0("Dialogue ties in ", filmtitle))
+       vertex.col=ifelse(nodelist$charfem==1, "#DECA49", "#a491e6"), 
+       label.cex=0.7, main=paste0("Character interactions in ", filmtitle))
   if (legend==TRUE) {
     legend(x="right", c("Male","Female"), pch=21, y.intersp=0.8, 
-           pt.bg=c('navy','#DECA49'), pt.cex=2.5, cex=1.2, 
+           pt.bg=c('#a491e6','#DECA49'), pt.cex=2.5, cex=1.2, 
            bty="n", ncol=1)
   }
 }
@@ -126,7 +126,7 @@ plot.film.gg <- function(my.adj=adj, nodelist=chars,  filmtitle="") {
   V(g)$nlines <- nodelist$nlines
   V(g)$gender <- nodelist$gender
   V(g)$name <- nodelist$character.name
-  V(g)$size <- rescale(V(g)$nlines, to=c(1.5,12))
+  V(g)$size <- rescale(V(g)$nlines, to=c(1.5,14))
   # Create the ggraph plot
   p <-  ggraph(g, layout = "stress") +
     geom_edge_link(aes(alpha = weight, 
@@ -137,12 +137,13 @@ plot.film.gg <- function(my.adj=adj, nodelist=chars,  filmtitle="") {
                    colour="#8c1828") +
     geom_node_point(aes(fill=gender), size = V(g)$size, shape=21, stroke=0.5,
                     colour="black") +
-    geom_node_text(aes(label=name), size=5, 
-                   nudge_y=rescale(V(g)$size, to=c(0.05,0.11))) +
-    scale_fill_manual(values = c("Male"="Navy","Female"="#DECA49"), 
+    geom_node_text(aes(label=name), size=4.5, 
+                   nudge_y=rescale(V(g)$size, to=c(0.06,0.15))) +
+    scale_fill_manual(values = c("Male"="#a491e6","Female"="#DECA49"), 
                       aesthetics = c("fill")) +
     scale_edge_alpha_continuous(range=c(0.2,1)) +
-    labs(title = paste0("Dialogue ties in ", filmtitle)) +
+    labs(title = paste0("Character interactions in ", filmtitle)) +
+    scale_x_continuous(expand = c(0.1, 0.1)) +
     theme_graph() +
     theme(legend.position="none", plot.title=element_text(size=16, hjust=0.5))
   # And plot it!
@@ -191,7 +192,8 @@ plot.film.html <- function(my.adj = adj, nodelist = chars, savenet = FALSE,
   
   #Generate the network object
   visnet <- visNetwork(nodes = visnodes, edges = vislinks,  
-                       main=list(text=paste0("Dialogue ties in ", filmtitle), 
+                       main=list(text=paste0("Character interactions in ", 
+                                             filmtitle), 
                                  style="font-family:palatino;font-size:20px; 
                                   text-align:center;")) %>%
     visInteraction(hover = TRUE, hoverConnectedEdges = TRUE, 
