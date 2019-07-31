@@ -18,7 +18,7 @@ Stay tuned and let me know if I can be of any help.
 
 ## Contact
 
-E-mail: petejones398@gmail.com  
+E-mail: pete.jones@manchester.ac.uk / petejones398@gmail.com  
 Twitter: [@pj_mcr](https://twitter.com/pj_mcr)
 
 ## License
