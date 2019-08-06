@@ -2,7 +2,7 @@
 ## Pete Jones
 ### A repository for sharing data, tools and info related to my research on using character interaction networks to examine gendered character positions in popular film narratives.
 
-For the last few years I've been manually collecting directed dialogue network data from popular films in order to explore what a network-based approach can add to our understanding of the narrative marginalisation of women in mainstream Hollywood cinema. To date, the only visible output of my research is [a paper I published in *Feminist Media Studies*](https://doi.org/10.1080/14680777.2018.1510846) analysing the distribution of dialogue in the film *Wonder Woman* (2017). That paper serves as a nice intro to my research, but doesn't provide any data or reproducible code.
+For the last few years I've been manually collecting directed dialogue network data from popular films in order to explore what a network-based approach can add to our understanding of the narrative marginalisation of women in mainstream Hollywood cinema. To date, the only visible output of my research is [a paper I published in *Feminist Media Studies*](https://doi.org/10.1080/14680777.2018.1510846) analysing the distribution of dialogue in the film *Wonder Woman* (2017). That paper serves as a nice intro to my research, but doesn't provide any data or reproducible code (yet).
 
 I'm still getting set up here, so for now the only data you'll find here is the raw dialogue data for the movie *Frozen* as I wanted to at least get something ready to share  while I work on cleaning up the rest of what I have. 
 
