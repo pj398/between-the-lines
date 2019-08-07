@@ -6,7 +6,7 @@ For the last few years I've been manually collecting directed dialogue network d
 
 I'm still getting set up here, so for now the only data you'll find here is the raw dialogue data for the movie *Frozen* as I wanted to at least get something ready to share  while I work on cleaning up the rest of what I have. 
 
-An interactive notebook walking through the development of a simple pipeline for reading in the raw data, summarising and plotting the character networks (all in R) can be viewed in html (`01-FilmPipeline.nb.html`) or reproduced in RStudio (`01-FilmPipeline.Rmd`). As explained towards the end of the notebook, the `Film functions.R` script can be used to streamline the pipeline by simply sourcing in the functions and using them to read in, summarise and plot the dialogue network data.
+An interactive notebook walking through the development of a simple pipeline for reading in the raw data, summarising and plotting the character networks (all in R) can be [viewed in html](https://pj398.github.io/between-the-lines/01-FilmPipeline.nb.html) (`01-FilmPipeline.nb.html`) or reproduced in RStudio (`01-FilmPipeline.Rmd`). As explained towards the end of the notebook, the `Film functions.R` script can be used to streamline the pipeline by simply sourcing in the functions and using them to read in, summarise and plot the dialogue network data.
 
 Next steps:
 - I will add the data and code for reproducing the analysis in the [*Wonder Woman* paper](https://doi.org/10.1080/14680777.2018.1510846) as soon as I find time.
