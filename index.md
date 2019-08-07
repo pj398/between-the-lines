@@ -5,4 +5,5 @@ View the notebooks for work associated with the [Between the Lines](https://gith
 | Notebook  | HTML  |
 | -----	|	----- |
 | [01-FilmPipeline](01-FilmPipeline.Rmd)	|	[HTML](01-FilmPipeline.nb.html) |
-| More soon	|	   |
+| 02-WonderWoman	| Coming soon |
+| 03-DynamicCentrality |  Coming soon |
