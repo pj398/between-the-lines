@@ -1,42 +1,10 @@
----
-title: "Analysing movie dialogue networks in R"
-author: "Pete Jones"
-output: html_notebook
----
+#-----------------------------------------------------------------------------#
+# film-functions.R
+# - Functions for reading in, summarising, and visualising raw
+#   dialogue network data.
+#-----------------------------------------------------------------------------#
 
-## Introduction  
-
-This notebook works through the development of a basic workflow for reading in, describing, and visualising film dialogue network data in R. The notebook will
-use data for the film *Frozen* (2013) as an illustrative example and aims to be entirely reproducible.  
-
-Make sure you have the `data` directory in the same folder as this notebook 
-file.  
-
-## Reading in the data  
-
-First, create a function `read.film` for reading in the dialogue data as 
-collected in the raw data files.  
-
-This function takes several arguments:  
-
-* edge.file: the csv file containing the edges
-* node.file: the csv file containing the node info
-* eventlist: specify the name to be used for the event list object in R 
-(default is `"lines"`) 
-* nodelist: specify the name to be used for the node list object in R 
-(default is `"chars"`) 
-* adjacency: specify the name to be used for the adjacency matrix object in R 
-(default is `"adj"`)
-* offset: specify the position of the "speakerID" column relative to the 
-default which is column 3 (this is useful if the function is used on data which
-collects data using additional or fewer columns)  
-
-The name specification options are useful if you want to have data for more 
-than one film in the workspace at the same time, but if handling one film at a 
-time (as in this notebook), then the defaults are fine and only the raw data 
-file names need to be specified. 
-
-```{r}
+# Read in the film
 read.film <- function(edge.file, node.file, eventlist="lines", 
                       nodelist="chars", adjacency = "adj", offset=0) {
   # First, let's read in the event list and the node list
@@ -65,18 +33,8 @@ read.film <- function(edge.file, node.file, eventlist="lines",
   assign(nodelist, chars, pos = ".GlobalEnv")
   assign(adjacency, adj, pos = ".GlobalEnv")
 }
-```
 
-Run the function on the Frozen directed dialogue data to read it into R.
-
-```{r message=FALSE}
-read.film(edge.file="data/frozenlines.csv", node.file="data/frozenchars.csv")
-```
-
-Check the data for identifiable data entry errors.
-
-```{r}
-# Create a function to check for data entry errors.
+# Check for data entry errors.
 check.for.errors <- function(adjacency = adj, eventlist = lines, rec=4){
   self.ties <- vector("numeric", length = nrow(adjacency))
   # Check diagonal for self-ties
@@ -105,34 +63,7 @@ check.for.errors <- function(adjacency = adj, eventlist = lines, rec=4){
   }
 }
 
-# Run the check
-check.for.errors()
-```
-
-## Viewing and describing the data  
-
-Now we can take a look at the event list:
-
-```{r}
-head(lines)
-```
-
-and the node list:
-
-```{r paged.print=FALSE}
-print(chars, row.names=FALSE)
-```
-
-and finally the adjacency matrix:
-
-```{r}
-adj
-```
-
-We can create a couple of descriptive tables for the data, one summarising
-some film-level metadata: 
-
-```{r}
+# Summarise film-level metadata
 film.summary <- function(eventlist = lines) {
   scenecount <- length(unique(eventlist[,2]))
   linecount <- length(unique(eventlist[,1]))
@@ -141,15 +72,8 @@ film.summary <- function(eventlist = lines) {
   colnames(filmsum) <- c("No. scenes","No. lines","No. characters")
   print(filmsum, row.names = FALSE)
 }
-```
 
-```{r paged.print=FALSE}
-film.summary()
-```
-
-and one summarising the gendered distribution of characters & dialogue:
-
-```{r}
+# Summarise gendered distribution of characters and dialogue
 film.summary.gender <- function(nodelist = chars) {
   # Calculate the proportion of named speaking characters that are female
   numfemales <- length(which(nodelist$charfem==1))
@@ -171,37 +95,26 @@ film.summary.gender <- function(nodelist = chars) {
                           "% lines in female")
   print(filmsumg, row.names=FALSE)
 }
-```
 
-```{r paged.print=FALSE}
-film.summary.gender()
-```
+# Plot the network using plot.network
+plot.film.basic <- function(nodelist=chars, my.adj=adj, filmtitle="", 
+                            legend=FALSE) {
+  library(network, quietly = TRUE)
+  # Create network object from adjacency matrix
+  filmnet <- network(my.adj)
+  # Plot the network
+  plot(filmnet, label=nodelist$character.name, edge.col='lightpink1', 
+       vertex.cex=sqrt(nodelist$nlines)/3, label.pos=3, arrowhead.cex=0.7,
+       vertex.col=ifelse(nodelist$charfem==1, "#ded649", "#55467a"), 
+       label.cex=0.7, main=paste0("Character interactions in ", filmtitle))
+  if (legend==TRUE) {
+    legend(x="right", c("Male","Female"), pch=21, y.intersp=0.8, 
+           pt.bg=c('#55467a','#ded649'), pt.cex=2.5, cex=1.2, 
+           bty="n", ncol=1)
+  }
+}
 
-## Plotting the network  
-
-#### Packages  
-
-To run all the code in this section smoothly, ensure you have the following 
-packages installed:
-
-```{r eval=FALSE}
-install.packages("extrafont")
-install.packages("igraph")
-install.packages("ggplot2")
-install.packages("ggraph")
-install.packages("graphlayouts")
-install.packages("network")
-install.packages("scales")
-install.packages("visNetwork")
-```
-
-#### Using ggraph  
-
-To produce a nice network visualisation using a combination of the R packages
-`ggraph`, `graphlayouts`:
-
-```{r results="hide"}
-# Create a function for plotting the network
+# Plot the network using ggraph
 plot.film.gg <- function(my.adj=adj, nodelist=chars,  filmtitle="") {
   library(igraph, warn.conflicts = FALSE, quietly = TRUE)
   library(ggraph, quietly = TRUE)
@@ -235,45 +148,8 @@ plot.film.gg <- function(my.adj=adj, nodelist=chars,  filmtitle="") {
   # And plot it!
   plot(p)
 }
-```
 
-```{r message=FALSE, fig.width=11, fig.height=8}
-plot.film.gg(filmtitle = "Frozen (2013)")
-```
-
-#### Using network  
-
-For a simpler approach with fewer package dependencies, we could just plot
-using `network::plot`:
-
-```{r message=FALSE}
-plot.film.basic <- function(nodelist=chars, my.adj=adj, filmtitle="", 
-                            legend=FALSE) {
-  library(network, quietly = TRUE)
-  # Create network object from adjacency matrix
-  filmnet <- network(my.adj)
-  # Plot the network
-  plot(filmnet, label=nodelist$character.name, edge.col='lightpink1', 
-       vertex.cex=sqrt(nodelist$nlines)/3, label.pos=3, arrowhead.cex=0.7,
-       vertex.col=ifelse(nodelist$charfem==1, "#ded649", "#55467a"), 
-       label.cex=0.7, main=paste0("Character interactions in ", filmtitle))
-  if (legend==TRUE) {
-    legend(x="right", c("Male","Female"), pch=21, y.intersp=0.8, 
-           pt.bg=c('#55467a','#ded649'), pt.cex=2.5, cex=1.2, 
-           bty="n", ncol=1)
-  }
-}
-```
-
-```{r message=FALSE, fig.width=11, fig.height=8}
-plot.film.basic(filmtitle="Frozen (2013)")
-```
-
-#### Using visNetwork  
-
-Or for something more interactive, we can use the `visNetwork` package:
-
-```{r message=FALSE}
+# Plot the network using visNetwork
 plot.film.html <- function(my.adj = adj, nodelist = chars, savenet = FALSE, 
                            filmtitle = "", edgelabs = FALSE, 
                            filename = "My visnet.html") {
@@ -333,42 +209,3 @@ plot.film.html <- function(my.adj = adj, nodelist = chars, savenet = FALSE,
   }
   visnet
 }
-```
-
-```{r message=FALSE}
-plot.film.html(filmtitle="Frozen (2013)")
-```
-
-## Creating a pipeline  
-
-The purpose of this walkthrough is to illustrate how the functions are defined 
-and what they do. A more practical workflow would involve defining the functions 
-in a separate source script, so that they can be called from a more streamlined analysis pipeline for any new data.  
-
-For example, let's say we have stored `read.film`, `check.for.errors`, `film.summary`, `film.summary.gender`, `plot.film.gg`, `plot.film.basic`, and `plot.film.html` in a script called `"film-functions.R"`. Then the entire 
-analysis pipeline for any particular film we want to analyse might simply look something like this:
-
-```{r eval=FALSE}
-source("Film functions.R")
-# Read in film data----
-read.film("data/myfilmlines.csv", "data/myfilmedges.csv")
-check.for.errors()
-# Describe the film----
-film.net.summary()
-# Plot the network----
-plot.film.basic(filmtitle = "Film title here")
-plot.film.gg(filmtitle = "Film title here")
-plot.film.html(filmtitle = "Film title here")
-```
-
-This way, we can reproduce every step of the analysis performed in this notebook 
-for any new data using only 10 lines of code.  
-
-## Session information  
-
-In the interest of reproducibility, below is the version and package dependency 
-info used in producing this notebook.
-
-```{r}
-sessionInfo()
-```
