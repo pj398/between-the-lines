@@ -9,7 +9,6 @@ read.film <- function(edge.file, node.file, eventlist="lines",
                       nodelist="chars", adjacency = "adj", offset=0) {
   # First, let's read in the event list and the node list
   lines <- read.csv(edge.file, sep=',', stringsAsFactors = FALSE)
-  lines <- as.matrix(lines)
   # Now, let's read in the node list and add some attributes we'll want later
   chars <- read.csv(node.file, sep=',', stringsAsFactors = FALSE)
   chars$nlines <- vector("numeric", nrow(chars))
@@ -18,6 +17,9 @@ read.film <- function(edge.file, node.file, eventlist="lines",
   }
   chars$linesin <- colSums(lines[,(4+offset):ncol(lines)])
   chars$gender <- ifelse(chars$charfem==1,"Female","Male")
+  if((FALSE %in% (apply(lines, 2, class) %in% "integer"))==FALSE) {
+    lines <- as.matrix(lines)
+  }
   # Create adjacency matrix from the event list
   adj <- matrix(0,nrow(chars),nrow(chars))
   for (i in 1:nrow(chars)) {
@@ -58,16 +60,16 @@ check.for.errors <- function(adjacency = adj, eventlist = lines, rec=4){
     cat("No empty rows found.")
   }
   # Check for other data entry errors (cell values not in c(0, 1))
-  if(length(which(lines[,rec:ncol(lines)] %in% 0:1 == FALSE))>0){
-    cat("\nData entry errors: ", which(lines[,rec:ncol(lines)] %in% 0:1==FALSE))
+  if(FALSE %in% unique(c(as.matrix(lines)[,rec:ncol(lines)])) %in% c("0","1")) {
+    cat("\nData entry values: ", unique(c(as.matrix(lines)[,rec:ncol(lines)])))
   }
 }
 
 # Summarise film-level metadata
-film.summary <- function(eventlist = lines) {
+film.summary <- function(eventlist = lines, offset = 0) {
   scenecount <- length(unique(eventlist[,2]))
   linecount <- length(unique(eventlist[,1]))
-  charcount <- length(unique(eventlist[,3]))
+  charcount <- length(unique(eventlist[,3+offset]))
   filmsum <- data.frame(scenecount,linecount,charcount)
   colnames(filmsum) <- c("No. scenes","No. lines","No. characters")
   print(filmsum, row.names = FALSE)
@@ -106,7 +108,7 @@ plot.film.basic <- function(nodelist=chars, my.adj=adj, filmtitle="",
   plot(filmnet, label=nodelist$character.name, edge.col='lightpink1', 
        vertex.cex=sqrt(nodelist$nlines)/3, label.pos=3, arrowhead.cex=0.7,
        vertex.col=ifelse(nodelist$charfem==1, "#ded649", "#55467a"), 
-       label.cex=0.7, main=paste0("Character interactions in ", filmtitle))
+       main=paste0("Character interactions in ", filmtitle))
   if (legend==TRUE) {
     legend(x="right", c("Male","Female"), pch=21, y.intersp=0.8, 
            pt.bg=c('#55467a','#ded649'), pt.cex=2.5, cex=1.2, 
