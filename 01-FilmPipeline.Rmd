@@ -121,8 +121,8 @@ head(lines)
 
 and the node list:
 
-```{r paged.print=FALSE}
-print(chars, row.names=FALSE)
+```{r message=FALSE}
+knitr::kable(chars)
 ```
 
 and finally the adjacency matrix:
