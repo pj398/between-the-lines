@@ -1,0 +1,193 @@
+---
+title: "Adding text analysis to the *Wonder Woman* study"
+author: "Pete Jones"
+output: html_notebook
+---
+
+## Introduction
+
+An obvious next step in analysing this kind of data is to think about what the 
+characters are saying as well as how much they speak. There are lots of 
+advantages to using manual extraction methods, but the amount of labour involved 
+in adding dialogue *content* to the data is one of the biggest drawbacks. 
+
+Nevertheless, I wanted to see what the data looked like for *Wonder Woman* so I 
+added it to the event list. The way I did this was to add another column to the 
+eventlist for the content of each line, and then re-watch the film with the 
+subtitle file open so I could copy and paste the dialogue from the subtitle 
+file into the relevant cell. This was pretty tortuous but there was no way 
+around it.
+
+In the vast majority of cases, this was simply a matter of matching each line 
+of dialogue to a row in the original event list. However, in a few places, it was necessary to modify the original data entry to accommodate the dialogue content. This mostly happened in cases where two characters are talking over each other, and in order to coerce the lines into a sequence so that each new line was in a row of its own, such that every line begans after the previous line began. In other words, I had to be a bit more granular in how I broke up these exchanges than I had been in the original data collection. This resulted in the number of lines in the data being increased from 769 to 815. This did not affect the findings or interpretations from the original data collection at all, as I will illustrate below.
+
+## Getting set up
+
+First, let's source in the functions:
+
+```{r}
+source('film-functions.R')
+```
+
+#### Reading in the data
+
+Now, let's read in the film data (but we need to specify offset=1 to account for the fact that the speakerID row is column 4 as the line content has been added 
+to column 3).
+
+```{r}
+read.film('data/wwlines-text.csv', 'data/wwchars-text.csv', offset=1)
+```
+
+```{r}
+check.for.errors()
+```
+
+#### Comparison with original coding
+
+To illustrate how the line content data differs from the original coding used to produce the figures in the previous notebook, let's look at some key figures, starting with Steve and Diana's stats:
+
+```{r message=FALSE}
+knitr::kable(chars[c(1,5),])
+```
+
+Actually, it is Steve who benefits the most from the changes, as his number of lines spoken increases more than Diana's (in the original coding, Steve spoke 265 lines and was spoken to 234 times, while Diana spoke 222 times and was spoken to 308 times). 
+
+```{r paged.print=FALSE}
+film.summary.gender()
+```
+
+These figures are very close to those produced by the original data (in which 43.04% of lines were spoken by women, who made up 49% of recipients).
+
+Overall, then, the changes introduced by coercing the line content into the event list do not alter any of the analytical claims made by the analysis of the original data.
+
+#### Packages
+
+Make sure the following packages are installed: 
+
+```{r eval=FALSE}
+install.packages("ggplot2")
+install.packages("magrittr")
+install.packages("quanteda")
+install.packages("stringi")
+```
+
+and loaded:
+
+```{r message=FALSE}
+library(ggplot2)
+library(magrittr)
+library(quanteda)
+library(stringi)
+```
+
+## Creating a dataset
+
+Let's create a dataset for the lines, keeping only the key variables from the input data, and adding a speaker gender variable.
+
+```{r}
+linedata <- cbind.data.frame("eventID" = lines$eventID, "Line" = lines$Line, 
+                             "speakerID" = lines$speakerID, "speakergen" = 
+                               ifelse(lines[,4] %in% which(chars$charfem==1), 
+                                      "Female", "Male"), stringsAsFactors=FALSE)
+```
+
+Add a variable indicating whether the recipient is male, female or a group (either containing a female or not):
+
+```{r}
+for (i in 1:nrow(linedata)) {
+  testgen <- which(lines[i,5:ncol(lines)]==1) %in% which(chars$charfem==1)
+  if(length(testgen)>1) {
+    if("TRUE" %in% testgen) {
+      linedata$receivergen[i] <- 'Group (inc. female)'
+     } else {
+        linedata$receivergen[i] <- 'Group (no female)'
+      }
+    } else {
+    if("TRUE" %in% testgen) {
+      linedata$receivergen[i] <- 'Female' 
+    } else {
+      linedata$receivergen[i] <- 'Male'
+    }
+  }
+}
+```
+
+Add variables indicating the number of characters and words in the lines:
+
+```{r}
+linedata$nchar <- sapply(linedata$Line, nchar)
+linedata$nwords <- sapply(linedata$Line, stringi::stri_count_words)
+```
+
+Now we can take a quick look at the data:
+
+```{r message=FALSE}
+knitr::kable(linedata[1:6,])
+```
+
+## Data preprocessing
+
+One of the steps in most data preprocessing pipelines for text analysis is the definition of stopwords. Stopwords are words which are of no interest and are usually made up of common building block words such as 'the', 'and' etc., whose purpose is grammatical rather than semantic. `quanteda` imports the `stopwords::stopwords` function, which uses the pre-defined [Stopwords ISO library](https://github.com/stopwords-iso). This library, like most stopwords libraries, excludes gender pronouns (e.g. 'he', 'she') from the analysis. However, given our interest in the capacity for female characters to be defined in ways which are indepdenent of relations with men, it would be more interesting to leave these gendered pronouns in the analysis.
+
+So, we can create a stopwords list that does not exclude gender pronouns from the analysis:
+
+```{r}
+stops <- stopwords()
+stops <- stops[! stops %in% c("he","him","his","himself",
+                              "she","her","hers","herself")]
+```
+
+Now, we can tokenise, lower-case, remove stopwords, and stem the data.
+
+```{r}
+mytokens <- tokens(linedata$Line, what = "word", remove_numbers = TRUE, 
+                    remove_punct = TRUE, remove_symbols = TRUE) %>% 
+  tokens_tolower() %>%
+  tokens_select(stops, selection = "remove") %>%
+  tokens_wordstem(language = "english")
+```
+
+## Exploring the data
+
+Let's create a document-feature matrix for the tokens `ww.dfm`, and a second one `ww.gen.dfm` separated into male-spoken lines and female-spoken lines.
+
+```{r}
+ww.dfm <- dfm(mytokens, tolower = FALSE)
+ww.gen.dfm <- dfm(mytokens, tolower = FALSE, groups = linedata$speakergen)
+```
+
+We can take a look at the word cloud for the overall dfm:
+
+```{r fig.width=5.5, fig.height=5.5}
+textplot_wordcloud(ww.dfm)
+```
+
+And a comparative word cloud split by the speaker gender:
+
+```{r fig.width=5.5, fig.height=5.5}
+textplot_wordcloud(ww.gen.dfm, min_count=4, 
+                   color=c("#ded649","#55467a"), comparison = TRUE)
+```
+
+And we can take a comparative look at the key words in the male-spoken lines and female-spoken lines. This shows us the words that appear more often than expected (using a chi-square test) in the target document given their frequency in the other document. In other words, it tells us which words appear more in the lines spoken by females than they do in the lines spoken by males, and vice versa.
+
+```{r fig.height=6, fig.width=8, fig.align='center'}
+textstat_keyness(ww.gen.dfm, target = "Female") %>%
+  textplot_keyness(color = c("#ded649", "#55467a"))
+```
+
+## What does this tell us?
+
+When added to the picture painted by the analysis in `01-WW-paper.Rmd`, the data here further complicate the idea that *Wonder Woman* is female-led. The lines spoken by women in the film are much more concerned with male characters (Zeus, him, men, his and are, which is stemmed from 'Ares') than those spoken by men. Moreover, the words spoken by men are much more active and commanding (get, come, put, move, everyone, follow) than the words spoken by women. Thus, if the earlier analysis suggested that the film seems to be vocally led by Steve rather than Diana, this only finds further evidence in the line content data. In *Wonder Woman*, at least in the vast majority of the narrative discourse, it is men we see commanding and leading, not women.
+
+#### Building on this
+
+Of course, this is all quite rudimentary and superficial, and I'm keen to dig deeper into the data in the future as I learn more about how text analysis can add to the project. In the meantime, I hope others will build on what I've started here, so let me know if you come up with anything interesting in the data.
+
+#### Session information
+
+Below is the version and package dependency info used in producing this notebook.
+
+```{r}
+sessionInfo()
+```

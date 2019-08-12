@@ -1,0 +1,15 @@
+---
+title: "Wonder Woman"
+author: "Pete Jones"
+output: html_notebook
+---
+
+## *Wonder Woman*
+
+The `wonder-woman` directory contains data and notebooks for reproducing and building on the analysis in my 2018 paper using character networks to explore 
+the gendered dynamics in *Wonder Woman*.
+
+| Notebook | HTML |
+| --- | --- |
+| `01-WW-paper.Rmd` | `01-WW-paper.nb.html` |
+| `02-WW-text.Rmd` | `02-WW-text.nb.html` |

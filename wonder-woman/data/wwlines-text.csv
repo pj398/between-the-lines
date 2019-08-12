@@ -1,0 +1,816 @@
+eventID,sceneID,Line,speakerID,Diana (1),Hippolyta (2),Antiope (3),Menalippe (4),Steve Trevor (5),Artemis (6),Venelia (7),Philippus (8),Isabel Maru (9),General Ludendorff (10),Senator Acantha (11),Epione (12),Etta Candy (13),Sir Patrick (14),Col. Darnell (15),Field Marshall Haig (16),Sameer (17),Charlie (18),Von Hindenberg (19),The Chief (20)
+1,1,It looks very good.,3,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2,1,Very good.,4,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,1,How is she doing?,3,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,1,She's good.,4,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,1,Keep working with her.,3,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,1,I will.,4,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,1,"Hello, mother. How are you today?",1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,2,Let's get you back to school before another tutor quits.,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+9,2,But don't you think it's time to start my training? Antiope thinks I'm ready.,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+10,2,Does she?,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+11,2,I could begin showing her some things.,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+12,2,She should at least be able to defend herself.,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+13,2,From whom?,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+14,2,In the event of an invasion.,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+15,2,"Isn't that why I have the greatest warrior in our history leading an entire army, General?",2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+16,2,"I pray a day will never come where she has to fight. But you know, a scorpion must sting, a wolf must hunt.",3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+17,2,She is a chilld. The only child on the island. Please let her be so.,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+18,2,But mother…,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+19,2,There will be no training.,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+20,3,What if I promised to be careful?,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+21,3,It's time to sleep.,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+22,3,What if I didn't use a sword?,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+23,3,Fighting does not make you a hero.,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+24,3,Just a shield then. No sharp edges.,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+25,3,"Diana, you are the most precious thing in the world to me. I wished for you so much so, I sculpted you from clay myself and begged Zeus to give you life.",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+26,3,You've told me this story.,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+27,3,"Which is why tonight I will tell you a new one. A story of our people, and my days of battle.",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+28,3,Yes!,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+29,3,So you will finally understand why war is nothing to hope for.,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+30,3,"Long ago, when time was new and all of history was still a dream, the Gods ruled the Earth, Zeus king among them. Zeus created beings over which the Gods would rule. Beings born in his image, fair and good, strong and passionate. He called his creation man. And mankind was good. But Zeus's son grew envious of mankind and sought to corrupt his father's creation. This was Ares, the God of War. Ares poisoned men's hearts with jealousy and suspicion. He turned them against one another and war ravaged the Earth. So, the Gods created us, the Amazons, to influence men's hearts with love and restore peace to the Earth. And for a brief time, there was peace.",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+31,4,"But it did not last. Your mother, the Amazon Queen, led a revolt that freed us all from enslavement. When Zeus led the Gods to our defense, Ares killed them one by one, until only Zeud himself remained.",3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+32,5,"Zeus used the last of his power to stop Ares, striking such a blow, the God of War was forced to retreat. But Zeus knew that one day Ares might return to finish his mission. An endless war, where mankind would finally destroy themselves, and us with them.",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+33,5,"So Zeus left us a weapon, one powerful enough to kill a God.",3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+34,5,"With his dying breath, Zeus created this island to hide us from the outside world, somewhere Ares could not find us. And all has been quiet ever since.",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+35,6,We give thanks to the Gods for giving us this paradise.,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+36,6,And the Godkiller?,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+37,6,The Godkiller?,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+38,6,The weapon that's strong enough to kill a god. Can I see it?,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+39,7,The Gods gave us many gifts. One day you'll know them all.,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+40,8,The Godkiller. It's beautiful. Who would wield it?,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+41,8,"I pray it will never be called to arms. But only the fiercest among us even could. And that is not you, Diana. You see, you're safe, and there is nothing you should concern yourself with.",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+42,9,You keep doubting yourself Diana.,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+43,9,No I don't.,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+44,9,Yes you do.,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+45,9,No I don't.,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+46,9,You are stronger than you believe. You have greater powers than you know. But if you don't try harder…,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+47,9,Diana!,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+48,9,Are you hurt?,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+49,9,"No, Mother, I'm fine, I was just",1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+50,9,Training.,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+51,9,"It seems I'm not the revered queen I should be. Disobeyed, by my own sister",2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+52,9,"No mother, it was me, I asked her to",1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+53,9,Off you go.,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+54,9,"You left me no choice, Hippolyta. You neglect your duty if she cannot fight.",3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+55,9,You speak of a time that may never come. He might never return. He could have died from his wounds.,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+56,9,"Ares is alive. You feel it, as I do, in your bones. It is only a matter of time before he returns.",3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+57,9,"The stronger she gets, the sooner he'll find her.",2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+58,9,"Hippolyta, I love her as you do. But this is the only way to truly protect her.",3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+59,9,"You will train her harder than any Amazon before her. Five times harder, ten times harder. Until she is better than even you. But she must never know the truth about what she is or how she came to be.",2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+60,10,Harder. You're stronger than this Diana. Again.,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+61,10,Never let your guard down. You expect the battle to be fair. A battle will never be fair.,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+62,10,Antiope! Lay still. You are bleeding.,4,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+63,10,I'm sorry.,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+64,10,"Wait, Diana, wait.",3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65,10,I'm sorry.,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+66,11,Wow.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+67,11,You're a man.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+68,11,Yeah. I mean… do I not look like one?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+69,11,Where are we?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+70,11,Themyscira.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+71,11,Therma-what?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+72,11,Who are you?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+73,11,I'm one of the good guys. And those are the bad guys.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+74,11,What?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+75,11,"The Germans. Come on, we need to get out of here.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+76,11,The Germans?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+77,11,Diana!,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+78,11,"Step away from her, now!",2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+79,11,Ready your bows!,2,0,0,1,1,0,1,1,1,0,0,1,1,0,0,0,0,0,0,0,0
+80,11,"They have guns, right?",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+81,11,Fire!,2,0,0,1,1,0,1,1,1,0,0,1,1,0,0,0,0,0,0,0,0
+82,11,Come on!,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+83,11,Stay there!,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+84,11,Shield!,3,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+85,11,"No, no. Antiope. Antiope. Antiope, hey. Hey, hey. Hey. ",1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+86,11,Diana.,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+87,11,Be still.,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+88,11,The time has come. You… you must…,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+89,11,"What? What, Antiope?",1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+90,11,"Godkiller. Diana, go.",3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+91,11,Go where? Go where,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+92,11,Go.,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+93,11,"No, please, no. No. No! No, no, no, no.",1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+94,11,You.,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+95,11,"No, mother, no. He fought at my side against the invaders.",1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+96,11,What man fights against his own people?,4,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+97,11,These aren't my people.,5,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+98,11,Then why do you wear their colours?,4,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+99,11,I can't tell you that.,5,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+100,11,You need to tell us now.,6,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+101,11,What is your name?,4,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+102,11,I can't tell you that either.,5,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+103,11,We should kill him now and be done with it.,7,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+104,11,If he dies we know nothing about who they are and why they came.,8,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+105,12,"My, uh, name is Captain Steve Trevor, pilot, American Expeditionary Forces. Serial Number 8141921. That's all I'm at liberty to…",5,1,1,0,1,0,1,1,1,0,0,1,1,0,0,0,0,0,0,0,0
+106,12,Assigned to British Intelligence. What the hell is this thing?,5,1,1,0,1,0,1,1,1,0,0,1,1,0,0,0,0,0,0,0,0
+107,12,The Lasso of Hestia compels you to reveal the truth.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+108,12,But it's really hot.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+109,12,"It is pointless, and painful, to resist.",4,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+110,12,What is your mission?,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+111,12,"Whoever you are, you are in more danger than you think.",5,1,1,0,1,0,1,1,1,0,0,1,1,0,0,0,0,0,0,0,0
+112,12,What is your mission?,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+113,12,I am a… I am a… I am a spy. I'm a spy. I'm a spy.,5,1,1,0,1,0,1,1,1,0,0,1,1,0,0,0,0,0,0,0,0
+114,12,"British Intelligence got word that the leader of the German Army, General Ludendorff, would be visiting a secret military installation in the Ottoman Empire. I posed as one of their pilots, and flew in with them. According to our intel, the Germans had no troops left, no money, no munitions of any kind. But our intel was wrong. The Germans had the Turks building bombs for them. And not just bombs, new weapons. Secret weapons. Invented by Ludendorff's chief psychopath, Dr. Isabel Maru. The boys in the trenches called her ""Dr. Poison."" And for good reason. From what I could tell, if Dr. Maru was able to complete her work, millions more would die. The war would never end. I was there to observe and report, nothing more, but I had to do something.",5,1,1,0,1,0,1,1,1,0,0,1,1,0,0,0,0,0,0,0,0
+115,12,I'm so close. I know I can make the gas penetrate the mask. I just… I need more time.,9,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+116,12,"Unfortunately, Doctor, we do not have more time.",10,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+117,12,"This work, this…",9,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+118,12,"But if I could get these notes back to British Intelligence in time, it could stop millions more from dying. It could stop the war.",5,1,1,0,1,0,1,1,1,0,0,1,1,0,0,0,0,0,0,0,0
+119,12,War? What war?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+120,12,The war. The war to end all wars.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+121,12,"Four years. 27 countries. 25 million dead, soldiers and civilians. Innocent people, women and children slaughtered. Their homes and their villages looted and burned. Weapons far deadlier than you can ever image. It's like nothing I've ever seen. It's like the world's going to end.",5,1,1,0,1,0,1,1,1,0,0,1,1,0,0,0,0,0,0,0,0
+122,13,Should we let him go?,8,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+123,13,And risk him bringing more men to our shores?,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+124,13,"We cannot hold him forever, my queen.",4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+125,13,"Mother. Excuse me, but after everything the man said, this must be Ares.",1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+126,13,"What are you talking about, child?",11,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+127,13,"Forgive me, Senator, but the man called it ""a war without end.""",1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+128,13,Millions of people already dead. Like nothing he's ever seen. Only Ares could do such a thing. We cannot simply let him go. We must go with him.,1,0,1,0,1,0,1,1,1,0,0,1,1,0,0,0,0,0,0,0,0
+129,13,I will not deploy our army and leave Themyscira defenseless to go and fight their war.,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+130,13,"It is not their war. Zeus created man to be just and wise, strong and passionate…",1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+131,13,"That was a story, Diana. There is much you do not understand. Men are easily corrupted.",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+132,13,"Yes, but Ares is behind that corruption. It is Ares who has these Germans fighting. And stopping the God of War is our foreordinance. As Amazons, this is our duty.",1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+133,13,"But you are not an Amazon like the rest of us. So you will do nothing. As your queen, I forbid it.",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+134,14,Strange. Is it true you saved his life?,12,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+135,14,Who told you that?,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+136,14,He did.,12,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+137,15,Woah! I… I didn't see you come in.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+138,15,Would you say you're a typical example of your sex?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+139,15,I am above average.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+140,15,What's that?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+141,15,"It's a… oh! Um, it's a watch.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+142,15,A watch?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+143,15,"Yeah, it's a watch. It tells time. My father gave it to me. It's been through hell and back with him. Now it's me, and good thing it's still ticking.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+144,15,What for?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+145,15,"Because it tells time. When to eat, sleep, wake up, work.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+146,15,You let this little thing tell you what to do?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+147,15,Yeah.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+148,15,Can I ask you some questions? Where are we?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+149,15,Themyscira.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+150,15,"No, I got that before. But I mean, where are we? What is this place? Who are you people? Why does the water do that? How come you don't know what a watch is? How come you speak English so well?",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+151,15,We speak hundreds of languages. We are the bridge to a greater understanding between all men.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+152,15,Right.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+153,15,"You know, I didn't get a chance to say this earlier, but thank you for dragging me out of the water.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+154,15,Thank you for what you did on the beach.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+155,15,"So, you're here to let me go?",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+156,15,"I tried, but it's not up to me. I even asked them to send me with you. Or anyone. An Amazon. The Amazons.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+157,15,The Amazons?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+158,15,It is our sacred duty to defend the world. And I wish to go. But my mother will not allow it.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+159,15,"Well, I can't say I blame her. The way this war is going, I wouldn't want anyone I care about near it.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+160,15,Then why do you want to go back?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+161,15,"I don't think ""want"" is the word. I guess I gotta try. My father told me once, he said, ""If you see something wrong happening in the world, you can either do nothing, or you can do something."" And I already tried nothing.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+162,16,Nice outfit.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+163,16,"Oh, thank you. Now, I will show you the way off the island, and you will take me to Ares.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+164,16,Deal.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+165,17,I'm leaving in that?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+166,17,We are.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+167,17,"Yeah, we are leaving in that?",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+168,17,Do you not know how to sail?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+169,17,Of course I know how to sail. Why wouldn't I know how to sail? It's just… It's been a while.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+170,17,"I'm going, Mother. I cannot stand by while innocent lives are lost. If no one else will defend the world from Ares, then I must. I have to go.",1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+171,17,"I know. Or, at least, I know I cannot stop you.",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+172,17,There is so much… so much you do not understand.,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+173,17,I understand enough. That I'm willing to fight for those who cannot fight for themselves. Like you once did.,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+174,17,"You know that if you choose to leave, you may never return.",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+175,17,Who will I be if I stay?,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+176,17,"This belonged to the greatest warrior in our history, our beloved Antiope. Make sure you are worthy of it.",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+177,17,I will.,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+178,17,"Be careful in the world of men, Diana. They do not deserve you.",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+179,17,"You have been my greatest love. Today, you are my greatest sorrow.",2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+180,17,Should you have told her?,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+181,17,"The more she knows, the sooner he'll find her.",2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+182,18,How long until we reach the war?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+183,18,The war? Which part? The Western Front in France is 400 miles long from the Alps to the North Sea.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+184,18,"Where the fighting is most intense, then. If you take me there, I'm sure I'll find Ares.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+185,18,Ares? As in the God of War?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+186,18,"The God of War is our responsibility. Only an Amazon can defeat him. With this. And once I do, the war will end.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+187,18,"Look, I appreciate your spirit, but this war is… it's a great big mess. And there's not a whole lot you and I can do about that. I mean, we can get back to London and try to get to the men who can.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+188,18,"I'm the man who can! And once I find and destroy Ares, the German armies will be freed from his influence and they will be good men again, and the world will be better.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+189,18,Great.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+190,18,You'll see.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+191,19,What are you doing?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+192,19,"Oh, I thought maybe you'd want to get some sleep.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+193,19,What about you? Are you not sleeping? Does the average man not sleep?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+194,19,"Yes, we sleep. We just don't sleep with, uh…",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+195,19,You don't sleep with women?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+196,19,"No. I mean, I do sleep with… I sleep with… Yes, I do. But, out of the, uh, confines of marriage it's just… It's not polite to assume, you know?",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+197,19,Marriage?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+198,19,"Marriage. Do you not have that on… You go before a judge and you swear to love, honor and cherish each other until death do you part.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+199,19,And do they? Love each other till death?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+200,19,"Not very often, no.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+201,19,Then why do they do it?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+202,19,I have no idea.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+203,19,"So, you cannot sleep with me unless I marry you.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+204,19,"I will sleep with you, if you want. I'll sleep right there.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+205,19,There's plenty of room.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+206,19,"Then, fine, if you don't mind.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+207,19,"No, it's up to you.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+208,19,"I know it's up to me, I'm making the choice. I will come sleep with you.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+209,19,Okay.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+210,19,"Yeah, just… okay.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+211,19,"You know, where I come from, I'm not considered average. You know, being a spy, you have to show a certain amount of… vigor.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+212,19,Have you never met a man before? What about your father?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+213,19,I had no father. My mother sculpted me from clay and I was brought to life by Zeus.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+214,19,"Well, that's neat.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+215,19,Sorry.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+216,19,"Where I come from, babies are made differently.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+217,19,You refer to reproductive biology.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+218,19,"Yes, yes.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+219,19,"Yeah, I know. I know all about that.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+220,19,"I mean, I refer to that, and other things.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+221,19,The pleasures of the flesh.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+222,19,Do you know about that?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+223,19,I've read all 12 volumes of Clio's Treatises on Bodily Pleasure.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+224,19,"All 12, huh?",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+225,19,Did you bring any of those with youo?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+226,19,You would not enjoy them.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+227,19,I don't know. Maybe.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+228,19,"No, you wouldn't.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+229,19,Why not?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+230,19,"They came to the conclusion that men are essential for procreation, but when it comes to pleasure, unnecessary.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+231,19,"No, no.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+232,19,Goodnight.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+233,19,Night.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+234,20,Doctor.,10,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+235,20,General.,9,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+236,20,Progress?,10,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+237,20,"Not enough. It is over, General. Germany is giving up. Von Hindenburg has recommended the Kaiser sign the armistice.",9,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+238,20,"As soon as the Kaiser sees the newest weapon, he will not sign the armistice.",10,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+239,20,"But, without my book…",9,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+240,20,We will get your book! It is you that I believe in. Not it. I know that you can and will succeed. It is what you were put on this earth to do.,10,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+241,20,Something did come to me last night. A different type of gas. For you. To restore your strength.,9,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+242,20,"I've got it. I've got it. And if it's what I think, it's going to be… terrible.",9,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+243,21,"Morning! We got lucky, we caught a ride. We made some good time. Welcome to jolly old London!",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+244,21,It's hideous.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+245,21,"Yes, it's not for everybody.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+246,22,Come on. Come on.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+247,22,Why are they holding hands?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+248,22,"Uh, probably because they're together.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+249,22,"No, no, no. We're not together. I mean, in that way. This way.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+250,22,To the war.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+251,22,"Well, technically, the war is that way. But we gotta go this way first.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+252,22,Then where are we going?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+253,22,We gotta get this notebook to my superiors.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+254,22,"Hey, hey, hey, no, no, no. I let you go, you take me to Ares. We made a deal, Steve Trevor. And a deal is a promise. And a promise is unbreakable.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+255,22,"Oh, boy. Damn it. All right. You come with me first to deliver this, and then we'll get you a ticket, uh… to the war. Deal?",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+256,22,Let's go. What are you doing?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+257,22,You can't do that because you're not wearing any clothes. Let's go… let's go buy you some clothes.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+258,22,What do these women wear into battle?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+259,22,"They don't, us…",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+260,22,A baby!,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+261,22,"No, no, no. No babies. No babies. That one's not made out of clay. Come on.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+262,22,Diana. Please.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+263,23,"Thank god! You're not dead! Hoorah and huzzah! I did think you were dead until I got your call, you know?",13,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+264,23,He's been gone for weeks. Not a single word. Very unlike him. I'm introducing myself. It's Etta Candy. I'm Steve Trevor's secretary.,13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+265,23,What is a secretary?,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+266,23,"Ooh. Well, I do everything. I go where he tells me to go, and I do what he tells me to do.",13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+267,23,"Well, where I'm from, that's called slavery.",1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+268,23,"I really like her. Oh, I do, I like her.",13,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+269,23,"Fanastic. Ladies, after you.",5,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+270,23,"And it does rather feel like that, except the pay is very good. We've got our work cut out for us, haven't we?",13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+271,23,Is this what passes for armor in your country?,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+272,23,Armor? It's fashion. Keeps our tummies in.,13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+273,23,Why must you keep them in?,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+274,23,Only a woman with no tummy would ask that question.,13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+275,23,"Conservative, but not entirely un-fun.",13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+276,23,Try it on at least.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+277,23,Very well.,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+278,23,Come on! Oh!,13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+279,23,How can a woman possibly fight in this?,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+280,24,"Fight? We use our principles. I mean, that's how we're going to get the vote. Altough, I am not opposed to engaging in a bit of fisticuffs, should the occasion arise.",13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+281,25,Lovely.,13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+282,26,It's itchy. It's choking me.,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+283,26,Can't say I blame it.,13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+284,27,Etta. Where is she?,5,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+285,27,"Oh, she's trying on outfit number 226.",13,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+286,27,"Miss Candy, the whole point was to make her look less distracting.",5,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+287,27,May I?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+288,27,Really? Specs? And suddenly she's not the most beautiful woman you've ever seen?,13,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+289,27,Better.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+290,28,"Yep, that's not going to work. Please put the sword down, Diana. Diana.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+291,28,Let me try it by myself.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+292,28,Etta…,5,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+293,28,"Why don't I meet you back at the office and, meanwhile, I'll take this for safekeeping.",13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+294,28,"Oh no, I don't think so.",1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+295,28,"You gotta put the sword down, Diana. Please.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+296,28,It doesn't go with the outfit.,13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+297,28,"At all. Put the sword down, first of all.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+298,28,Promise me you will protect it with your life.,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+299,28,Yes… no.,13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+300,28,"You can trust her, just hand that over.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+301,28,Shielf.,13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+302,28,And the shielf to her.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+303,28,"You got it? Thanks, Etta.",5,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+304,29,What is it?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+305,29,"Hopefully nothing, come on.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+306,29,"Steve, why are we hiding?",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+307,29,"Shh, come on, come on.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+308,29,Stand back.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+309,29,Or maybe not.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+310,29,Is there anything else you want to show me?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+311,29,Diana.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+312,29,He's… he's dead.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+313,29,Cyanide.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+314,30,Stay here. I'll be right back.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+315,30,"Colonel, I have to talk to you outside.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+316,30,What's she doing in here?,15,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+317,30,Get her out.,15,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+318,30,I think it's this way.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+319,30,Why do they not let him speak? He's talking peace.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+320,30,"No, not right now.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+321,31,"Trevor, what the hell were you thinking, bringing a woman into the Council Chamber?",15,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+322,31,The intel that I brougoht back is time-sensitive. This is one of Dr. Maru's notebooks.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+323,31,Notebook or not…,15,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+324,31,We need to get it to cryptography and I need an immediate audience with the generals.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+325,31,You do not just barge in here and demand an audience with the Cabinet.,15,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+326,31,"Sir with all due respect, what I saw in my last mission could change the course of the war.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+327,31,"Captain Trevor! I heard we'd lost you on one of your missions, yet here you are, back from the dead, and I see you've brought a friend with you.",14,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+328,31,"Our deepest apologies for the interruption, sir.",15,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+329,31,"No, no, no. Nonsense. Thanks to this young woman, the room was finally quiet enough for me to get at least a few words in.",14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+330,31,"Sir Patrick Morgan, at your service. ",14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+331,31,"Diana, Princess of Themys",1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+332,31,"Prince. Diana Prince. She is, uh… and I… are… working together. She actually helped me bring this, uh, notebook back here. That's from Dr. Maru's lab. I think the information contained inside will change the course of the war, sir.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+333,31,My God. Dr. Poison herself.,14,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+334,31,Yes.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+335,32,Ottoman and Sumerian. Surely someone else in this room knew that.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+336,32,Who is this woman?,16,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0
+337,32,"She's my, um, secretary sir.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+338,32,And she can understand Ottoman and Sumerian?,16,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+339,32,She's a very good secretary.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+340,32,See her out.,16,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+341,32,"If this woman can read it, we should hear what she has to say.",15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+342,32,"Yes, very well.",16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+343,32,It's a formula for a new kind of gas. Mustard gas. Hydrogen-based instead of sulfur.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0
+344,32,Gas masks would be useless against hydrogen.,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+345,32,The book says they plan to release the gas at the front?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+346,32,When?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+347,32,"It doesn't say. Wait, front of what?",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+348,32,"Sir, that is the evidence we need. You have to find out where they're making that gas. You have to burn it to the ground. Destroy it.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+349,32,Ludendorff was last seen in Belgium.,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+350,32,We can't be seen sending troops into German-occupied Belgium as we are negotiating their surrender.,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+351,32,"Sir, I've seen that gas with my own eyes. If it is used, it will kill everyone on both sides. They will all die.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+352,32,"That is what soldiers do, Captain.",16,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+353,32,Send me in with some logistical support. At least give me the chance to take out Ludendorff's operation myself.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+354,32,Are you insane? I can't introduce rogue elements this late in the game.,16,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+355,32,"Sir, I can",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+356,32,"Now, more than ever, this armistice is of paramount importance. It must be negotiated, it must be signed, and this is… well, it's the best way of stopping the war.",14,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+357,32,"Captain, you will do nothing. And that is an order.",16,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+358,32,"Yes, sir. I understand, sir.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+359,32,I don't.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+360,32,"Diana, I know this is confusing.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+361,32,It is not confusing. It's unthinkable!,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+362,32,Who is this woman?,16,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0
+363,32,"She's with me. She's with us, sir.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+364,32,I am not with you!,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+365,32,"You would knowingly sacrifice all those lives, as if they mean less than yours.",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+366,32,"Diana, let's talk about this outside.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+367,32,"As if they mean nothing? Where I come from, generals don't have in their offices like cowards.",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+368,32,That's enough.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+369,32,They fight alongside their soldiers. They die with them on the battlefield. ,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+370,32,That's enough!,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+371,32,You should be ashamed.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+372,32,"My apologies, sir. My apologies. ",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+373,32,Diana.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+374,32,You should be ashamed.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+375,32,Diana.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+376,32,All of you should be ashamed!,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0
+377,33,"Please slow down, Diana.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+378,33,"That's your leader? How could he say that, believe that?",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+379,33,"Just keep quiet, shh.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+380,33,And you! Was your duty to simply give them a book?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+381,33,No!,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+382,33,You didn't stand your ground! You didn't fight!,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+383,33,Because there was no chance of changing his mind!,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+384,33,"This is Ares, and he's not going to allow a negotiation or a surrender!",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+385,33,"Please, if you would just listen",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+386,33,"The millions of people you talked about, they will die.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+387,33,We are going anyway.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+388,33,You mean you were lying?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+389,33,"I'm a spy, that's what I do.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+390,33,How do I know you're not lying to me right now?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+391,33,I am taking you to the front. We are probably going to die. This is a terrible idea. We're going to need reinforcements.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+392,34,These are the reinforcements?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+393,34,Yup.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+394,34,Are these even good men?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+395,34,Hmm. Relatively.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+396,34,Boy! Which prince is that?,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+397,34,"But seriously, which prince? Hey, Sultan Angora Mynx Cashmere, could I talk to you for a minute?",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+398,34,"Bar. Well, a pub.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+399,34,"You bugger. I have been greasing those peacocks all night, and you…",17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+400,34,Oh my goodness gracious. That's a work of art.,17,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+401,34,"Sameer, Diana. Diana, Sameer.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+402,34,"Hi, Diana. You can call me Sammy, please.",15,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+403,34,Sammy.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+404,34,"Sameer, I wouldn't do that, if I were you.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+405,34,Sameer's a top undercover man. He can talk the skin off a cat in as many languages as you can.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+406,34,He doesn't look that impressive to me.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+407,34,"You do to me. Your eyes, as soft as your smile…",17,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+408,34,And your eyes… look like they want something.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+409,34,"I know Chinese too, tricky girl.",17,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+410,34,But can you recite Socrates in Ancient Greek?,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+411,34,"Oh, you're done. Where's Charlie?",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+412,34,Le voila.,17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+413,34,At least this Charlie is good with his fists.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+414,34,That's not Charlie.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+415,34,That's Charlie.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+416,35,"Steven! May God put a flower upon your head, son. Good to see you.",18,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+417,35,"So, what were you fighting about?",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+418,35,"I mistook his glass for mine, it happens.",18,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+419,35,This man is no fighter.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+420,35,Charlie is an expert marksman. It means he shoots people.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+421,35,From very far away.,17,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+422,35,They never know what hit them.,18,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+423,35,So how do you know who you kill if you can't see their face?,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+424,35,"I don't. Trust me, it's better that way.",18,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+425,35,You fight without honor.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+426,35,"Who gets paid for honor, eh?",18,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+427,35,"So, what's the job, boss?",17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+428,35,"Uh, two days, tops. We need, uh, supplies and passage to Belgium.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+429,35,And what's the going rate?,18,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+430,35,Better be a good pay.,17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+431,35,"Yeah, well, here's the thing. Um, I told you it was going to be quick. And there's a lot to be gained by this. So, it's for a great cause… uh, freedom. Friendship. Uh, ending the war, friendship.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+432,35,"Okay, you have no money.",17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+433,35,No.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+434,35,All I want right now is a picture of your lovely face.,17,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+435,35,You won't need a picture… I'm coming with you.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+436,35,What? What is this?,17,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+437,35,We're going to drop her off at the front.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+438,35,Dropping her off?,17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+439,35,Yeah.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+440,35,"Listen, sweetheart, I'm not going to get myself killed helping a wee lassie out of a ditch, know what I mean?",18,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+441,35,I am both frightened and aroused.,17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+442,35,"Oh, here they are. Sorry I'm late.",13,1,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0
+443,35,Sir Patrick.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+444,35,"Yes, that's what I was going to mention. Sir Patrick.",13,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+445,35,"No, no, no. Please, gentlemen, sit. Miss Prince, sit.",14,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+446,35,I assume you're here planning something that's going to get you either court-martialed or killed.,14,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+447,35,And I assume you're here to stop us.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+448,35,"No. Not at all, in fact. Well, look. I was a younger man, once, and had I been in better health, I'd like to think that I might do the same. It's a very, very honorable thing you're doing. Therefore, I'm here to help. Unofficially, of course. What's your plan?",14,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+449,35,"If there's another weapons facility, find it and destroy it. Along with Ludendorff and Maru.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+450,35,"In that case, to allay suspicion, the charming Etta here could, uh, run the mission from my office.",14,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+451,35,Run?,13,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+452,35,"Also, there's enough here for a few days.",14,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+453,35,"Thank you, sir.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+454,35,"You're very welcome. Take great care, all of you, and good luck.",14,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+455,36,What do you think?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+456,36,It's wonderful!,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+457,36,Yeah.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+458,37,I hope our guy meets us here. Chief's expecting us before dark.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+459,37,Chief?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+460,37,"Uh, yeah. A smuggler. Very reputable.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+461,37,"A liar, a murderer, and now a smuggler. Lovely.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+462,37,"Careful, I might get offended.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+463,37,I wasn't referring to you.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+464,37,"Really? I went undercover and pretended to be somebody else, shot people on your beach, and smuggled a notebook. Liar, murderer, smuggler. Are you still coming?",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+465,37,It's awful.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+466,37,That's why we're here.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+467,38,The gas will kill everything. What kind of weapon kills innocents?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+468,38,"In this war, every kind.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+469,39,"You were absent at the council meeting, General.",19,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+470,39,I see you are negotiating the terms of the armistice without me.,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+471,39,On the Kaiser's behalf.,19,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+472,39,"And on your insistence! We could easily win this war, if only you had a little faith.",10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+473,39,"We don't. There are shortages of food, medicine, ammunition. Every hour we delay costs thousands of German lives.",19,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+474,39,"One attack and the war can be ours! As we speak, my chemist",10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+475,39,"We stand against you and your witch. Ludendorff, enough! Twenty-four hours from now, this war will end. It is over.",19,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+476,39,It is over for you.,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+477,39,It is over for all of you.,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+478,39,But the mask won't help.,9,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+479,39,They don't know that.,10,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+480,39,Let's go. Time to stage a demonstration for the Kaiser.,10,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+481,40,You're late.,20,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+482,40,"Cowboy sneak-attack, Chief! How are you? Good to see you, pal.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+483,40,"Okay, big man!",18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+484,40,Good to see you.,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+485,40,"Ah yes. Good to see you, my friend.",17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+486,40,Who is this?,20,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+487,40,And I am Diana.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+488,40,Where'd you find her?,20,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+489,40,She found me.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+490,40,I plucked him from the sea.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+491,40,It's a long story. We don't have to talk about that right now.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+492,40,What's there?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+493,40,British tea for the Germans. German beer for the British. And Edgar Rice Burroughs novels for both.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+494,40,And guns!,18,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+495,40,"Well, may we get what we want!",18,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+496,40,May we get what we need.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+497,40,But may we never get what we deserve.,17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+498,41,Strange thunder.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+499,41,"German 77s. Guns, big ones. It's the Front out there. The evening hate.",20,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+500,41,"So, who do you fight for in this war?",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+501,41,I don't fight.,20,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+502,41,"You're here for profit, then?",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+503,41,No better place to be.,20,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+504,41,Nowhere better to be than in a way where you don't take a side?,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+505,41,"I have nowhere else. The last war took everything from my people. We have nothing left. At least here, I'm free.",20,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+506,41,Who took that from your people?,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+507,41,His people.,20,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+508,41,Shh. You're safe. You're safe. Are you okay?,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+509,41,"Get off me, woman! Stop making a fuss! God!",18,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+510,41,He sees ghosts.,20,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+511,41,You're gonna get cold.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+512,41,"Oh, I don't",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+513,41,Don't worry about Charlie. He doesn't mean anything by it.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+514,42,"These animals, why are they hurting them?",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+515,42,"Because they need to move, quick. Like us.",18,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+516,42,But this is not the way. I could help them.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+517,42,"There's no time. Come on, woman!",18,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+518,42,That man. He's wounded.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+519,42,"There is nothing you can do about it, Diana. We must keep moving!",17,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+520,43,What is this?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+521,43,You wanted me to take you to the war. This is it.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+522,43,So where are the Germans?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+523,43,A couple of hundred yards across the field. Their trench is,18,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+524,43,"All right, let's move!",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+525,43,"Diana, we have to go.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+526,43,We need to help these people.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+527,43,We have to stay on-mission.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+528,43,The next safe crossing is at least a day away.,20,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+529,43,What are we waiting for?,18,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1
+530,43,"We cannot leave without helping them. These people are dying. They have nothing to eat, and in the village enslaved, she said.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+531,43,I understand that.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+532,43,Women and children!,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+533,43,We need to make our next position by sundown.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+534,43,How can you say that? What is the matter with you?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+535,43,"This is No Man's Land, Diana. It means no man can cross it, all right? This battalion has been here for nearly a year and they barely gained an inch. Because on the other side there are a bunch of Germans pointing machine guns at every square inch of this place. This not something you can cross. It's not possible.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+536,43,"So what? So, we do nothing?",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+537,43,"No, we are doing something. We are. We just… we can't save everyone in this war. This is not what we came here to do.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+538,43,"No, but it's what I am going to do.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+539,43,Diana!,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+540,43,What the bloody hell is she playing at?,18,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+541,43,She's taking all the fire! Let's go!,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+542,43,Steve! Let's go!,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+543,43,"Come on, go!",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+544,44,"Stay here, I'll go ahead.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+545,45,Let's move! We need more firepower!,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+546,46,Sniper! Move!,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+547,46,"Charlie, bell-tower!",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+548,46,"Come on, Charlie. Shoot him!",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+549,46,"Hey, it's okay. It's okay.",17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1
+550,46,"Follow me, give me some cover!",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+551,46,"We're going to put this on our backs, and when I say go, lift hard!",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+552,46,Diana! Shield!,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+553,46,Go!,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1
+554,47,"For all his talk of shooting, he cannot shoot.",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+555,47,"Not everyone gets to be what they want to be all the time. Me? I am an actor. I love acting. I didn't want to be a soldier. But I'm the wrong color. Everyone is fighting their own battles, Diana. Just as you are fighting yours.",17,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+556,48,I'm on the… on the phone.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+557,48,"Uh, it's Veld. V-E-L-D. It's a tiny village. It may not even be on the map.",5,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+558,48,Ooh! I found it! I found it!,13,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+559,48,Did you find Ludendorff's operation?,5,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+560,48,"No, no, no. But I located him. And, oh, lucky you, he's only a few miles away, at German High Command.",13,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+561,48,"German High Command, huh?",5,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+562,48,"So, intel reports that Ludendorff is hosting a gala. A sort of last hurrah before the Germans sign the armistice. And the Kaiser himself is going to be there as well as Dr. Maru.",13,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+563,48,"Actually, the gala could be perfect cover.",5,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+564,48,Captain Trevor.,14,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+565,48,"Yes, sir.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+566,48,"You are, under no circumstances, to go anywhere near that gala tomorrow night. Do you hear me? You'd be jeopardizing everything we've worked for. You cannot compromise the armistice.",14,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+567,48,"Sir, there will be no armistice…",5,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+568,48,Steve.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+569,48,"…once Ludendorff bombs the entire front line. Hold on one second, sir.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+570,48,You shouldn't be bothered about upsetting the peace accord.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+571,48,Why not?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+572,48,Ares would never let…,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+573,48,What? What is it?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+574,48,"Of course. It makes complete sense. Ares developed a weapon, the worst ever devised.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+575,48,Ares? You mean Ludendorff.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+576,48,No. I mean Ares. Ludendorff is Ares!,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+577,48,"Sir, this is our final chance to find out where the gas is and to learn how Ludendorff plans on delivering it.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+578,48,"No, no, no, no. I forbid it. Do you hear me? I forbid it.",14,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+579,48,"Sir, I'm losing you. Sir?",5,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+580,48,Hello?,14,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+581,48,Sir?,5,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+582,48,How likely is he to respect my wishes?,14,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+583,48,"Not very likely, I'll be honest.",13,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+584,49,"Sammy, Sammy. No, no, no, no. Sammy, I have to work. I gotta rustle up a German uniform. I still have to plot the course for tomorrow.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+585,49,"That's easy boss. Come on. There is nothing we can do until tomorrow, you said it yourself, Steve.",17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+586,49,"So, Madame, s'il vous plait. Incroyable! Magnifique! Thank you.",17,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+587,49,Thank you.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+588,49,"Monseur, s'il vous plait. Et voila!",17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+589,49,"Merci, Sammy.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+590,49,Et voila!,17,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+591,49,You did this.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+592,49,We did.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+593,49,Do you have dancing on... Paradise Island?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+594,49,"Dancing, yeah. Of course. But these people are just swaying.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+595,49,"Okay, if you're going to be fighting the God of War, I may as well teach you how to dance, you poor thing. All right, probably without the gun. Madame. If you would.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+596,49,"Well, if I'm going to a gala, I'll need to know how to dance.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+597,49,You're not going the gala.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+598,49,Of course I am.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+599,49,"No, you're not.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+600,49,Why wouldn't I?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+601,49,"Well, for one, you don't know how to dance.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+602,49,I would argue that they don't know how to dance.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+603,49,"Be polite, be polite. All right, so give me your hand, like so. And I'm gonna put my arm around you, like so. And we just… What did you call it? Sway? Then you just sway.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+604,49,You're awfully close.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+605,49,That's what it's all about.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+606,49,I see.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+607,49,I haven't heard him sing in years.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+608,49,"It's, uh… It's a snowfall.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+609,49,Touch it.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+610,49,It's magical.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+611,49,"It is, isn't it? It is, yeah.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+612,49,Is this what people do when there are no wars to fight?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+613,49,"Yeah. Yeah, this and other things.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+614,49,What things?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+615,49,"Um… they have breakfast. They love a breakfast. And, um, they love to wake up and read the paper and go to work. They get married. Make some babies, grow old together. I guess.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+616,49,What is it like?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+617,49,I have no idea.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+618,50,The villagers gave them to us.,17,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1
+619,50,A gracious gift.,20,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+620,50,And they call us heroes.,17,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+621,50,You are.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+622,50,"Hey, fellas. I know that I said this job was two days, and a deal's a deal.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+623,50,You'd get lost without us.,20,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+624,50,"Yeah, we all know that Diana is capable of taking care of herself. I'm worried that you won't make it.",17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+625,50,There's no more money.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+626,50,We've been paid enough.,17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+627,50,"Maybe you're better off without me, yeah?",18,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1
+628,50,"No, Charlie. Who will sing for us?",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+629,50,Yeah.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+630,50,"Oh, no, please.",17,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+631,50,Sing?,18,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+632,50,You asked for it.,20,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+633,51,You must think I was born yesterday.,18,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+634,51,"I know it sounds crazy, but it's true. Every word.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+635,51,"Wait, wait, wait. There is a whole island of women like her and not a single man among them? How do we get there?",17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+636,51,"And she thinks that Ludendorff is Ares, the God of War?",17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+637,51,And only by killing him will the war end? Don't be daft.,18,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+638,51,You saw what happened out there. The way she charged that machine-gun nest? The way she took out that tower? Maybe it's true.,17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+639,51,I think it's true. I believe it's true.,20,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+640,51,Et voila!,17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+641,51,"Steven, son, you don't really believe this rubbish, do you?",18,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+642,52,"Diana. Diana. Hiding, hiding.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+643,52,How the hell do we get into that?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+644,52,I see only a couple of guards on the door to distract.,18,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+645,52,Yeah it won't look suspicious at all when I come sauntering out of the woods on foot.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+646,52,I could get in.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+647,52,"You're not going in, it's too dangerous.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+648,52,Too dangerous?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+649,52,"Yes, too dangerous, and you're too distracting.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+650,52,"So, look, I'll go in there and follow them to wherever they're working on the gas or, better yet, where it is.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+651,52,Then I'm coming with you.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+652,52,"No, you're not. What you're wearing isn't exactly undercover.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+653,52,"I don't know, I would say she was pretty undercover on that battlefield.",17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+654,52,"We just, we can't get you in, okay? So I'll scout it out, report back, and",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+655,52,"But as long as he's still alive, it doesn't",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+656,52,You cannot go into German High Command and kill anyone. You just can't You have to trust me.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+657,52,Oh wow!,17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+658,52,Where did that come from?,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+659,52,"Oh, can I drive it? Please, let me drive it. I'll be your chauffeur.",17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+660,52,"Yes. Come on, come on.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+661,52,Stay put!,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+662,52,Where did this come from?,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+663,52,A field over there. It's full of them!,20,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+664,52,"Chief, I say you and me scope out the area in case we need to beat a hasty retreat. What do you say, Diana? Huh?",18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+665,53,"Steve, they have invitations.",17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+666,53,"Don't worry, play it cool. You got this, you got this.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+667,53,"Your head must be empty. He wants my invitation, you idiot.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+668,53,"I'm sorry. I'm so sorry. I must apologize a thousand thousand times, my master.",17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+669,53,Are you saying we drove all the way through the mud and rain only for you to lose my invitation?,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+670,53,"I'm a snail. No! I'm a bug. Not even a bug. I am the dung of a bug! And you are right, master.",17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+671,54,Excuse me.,5,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+672,54,I don't drink.,9,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+673,54,Have we met?,9,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+674,54,"No, but I've been watching you. Following your career, I mean. You are Dr. Isabel Maru. The most talented chemist in the German Army. I am a fan.",5,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+675,54,I hope I am not crossing a line. I know you and General Ludendorff are very close.,5,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+676,54,We work well together. Yes.,9,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+677,54,"But having someone like me behind you, I could provide a lot more.",5,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+678,54,And who are you?,9,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+679,54,A man who would show you appreciation a genius like yourself deserves.,5,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+680,54,"I love fire, don't you? It is like a living act of entropy. The ultimate weapon of destruction. Reminding us that, in the end, everything eventually returns to the ash it came from. There is something reassuring about it.",5,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+681,54,I see all of that in your eyes. Perhaps you could show me what you're working on. I hear it is… I hear it is extraordinary.,5,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+682,54,"I appreciate your interest in my work. But I am loyal to General Ludendorff. Besides, now I see your attention is… elsewhere.",9,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+683,54,Enjoying the party?,10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+684,54,I confess I'm not sure what it is we're celebrating.,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+685,54,"A German victory, of course.",10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+686,54,Victory? When I hear peace could be so close.,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+687,54,Peace? There's only an armistice in an endless war.,10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+688,54,Thucydides.,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+689,54,"Ah! You know your Ancient Greeks. They understood that war is a god. A god that requires human sacrifice. An in exchange, war gives man purpose, meaning, a chance to rise above his petty, mortal, little self and be courageous, noble, better!",10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+690,54,Only one of the many gods believed in that. And he was wrong.,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+691,54,You know nothing of the gods.,10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+692,54,Enjoy the fireworks.,10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+693,54,What are you doing? Out of my way!,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+694,54,"Diana, look at me. If you kill Ludendorff before we find the gas, we won't be able to stop anything.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+695,54,I will stop Ares!,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+696,54,What if you're wrong? What if there is no Ares?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+697,54,You don't believe me.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+698,54,I can't let you do this.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+699,54,What I do is not up to you.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+700,55,Diana!,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+701,55,"Diana, it's the gas…",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+702,55,The village… the village!,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+703,55,What are they cheering for?,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1
+704,55,Diana!,17,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+705,55,What did they fire?,20,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+706,55,The gas. It was Ludendorff.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+707,55,I saw him. He was in the tower.,18,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+708,55,"Wherever he goes, you follow.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+709,55,How will you find us?,17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+710,55,I know how.,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+711,56,Diana!,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+712,56,They're dead. They're all dead. I could have saved them. I could have saved them if it weren't for you. You stopped me from killing Ares!,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+713,56,No!,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+714,56,"Stay away from me! I understand everything now. It isn't just the Germans that Ares has corrupted. It's you, too. All of you. I will find Ares and I will kill him.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+715,56,"Diana. That smoke. It's the Chief, he followed Ludendorff.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+716,56,Follow the smoke!,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+717,56,"Hey! Diana, that way!",20,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+718,56,"Come on, let's go!",20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+719,57,"What a surprise. Strange. Unfortunately, I have another matter to attend to.",10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+720,57,What are you?,10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+721,57,You will soon find out.,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+722,57,"As magnificent as you are, you are still no match for me.",10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+723,57,We'll see about that.,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+724,57,"I am Diana of Themyscira. Daughter of Hippolyta, Queen of the Amazons. And your wrath upon this world is over.",1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+725,57,"In the name of all that is good in this world, I hereby complete the mission of the Amazons by ridding this world of you forever!",1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+726,57,Diana?,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+727,57,Diana!,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+728,57,"I killed him. I killed him, but nothing stopped. You kill the God of War, you stop the war.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+729,57,Exactly what we have to do now. We have to stop the gas. Come on.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+730,57,No. All of this should have stopped!,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+731,57,Diana.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+732,57,The fighting should have stopped. Why are they doing this?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+733,57,I don't know! I don't know. I…,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+734,57,Ares is dead. They can stop fighting now. Why are they still fighting?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+735,57,Because maybe it's them! Maybe… maybe people aren't always good. Ares or no Ares. Maybe it's just… it's who they are. Diana…,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+736,57,No…,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+737,57,"Diana, we can talk about this later. I need you to come with me.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+738,57,"No. No. After everything I saw, it can't be! It cannot be! They were killing each other. Killing people they cannot see. Children… children! No it had to be them. It cannot be them!",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+739,57,"Diana, people… I…",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+740,57,"She was right. My mother was right. She said ""The world of men do not deserve you."" They don't deserve our help, Steve.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+741,57,It's not about deserve!,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+742,57,They don't deserve our help.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+743,57,Maybe we don't! But it's not about that. It's about what you believe. You don't think I get it after what I've seen out there? You don't think I wish could tell you that it was one bad guy to blame? It's not! We're all to blame.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+744,57,I am not.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+745,57,"But maybe I am! Please, if you believe that this war should stop, if you want to stop it, help me stop it right now. Because, if you don't, they will kill thousands more.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+746,57,"Please, please come with me. I have to go.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+747,57,I have to go.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+748,57,Hey! Hey!,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+749,57,Where is Diana?,17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+750,57,We're on our own.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+751,57,What?,17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+752,57,"What do you see, Charlie?",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+753,57,Looks like a bunch of gas bombs but I can't see where they're taking them.,18,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+754,57,How are we going to get in there?,20,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+755,57,"I've got an idea. Come on, guys. Come on!",17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1
+756,57,Who's there?,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+757,57,Sir Patrick.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+758,57,"You were right, Diana. They don't deserve our help. They only deserve destruction.",14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+759,57,You… you're him.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+760,57,I am. But I am not what you thought I was.,14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+761,58,What is it?,20,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+762,58,The future.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+763,59,"I am not your enemy, Diana. I am the only one who truly knows you. And who truly knows them as you now do. They have always been, and always will be weak, cruel, selfish, and capable of the greatest horrors.",14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+764,59,All I ever wanted was for the Gods to see how evil my father's creation was. But they refused.,14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+765,59,I am Diana of Themyscira.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+766,59,So I destroyed them.,14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+767,59,Daughter of Hippolyta. And I'm here to complete her…,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+768,59,The Godkiller…,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+769,59,My dear child. That is not the Godkiller. You are. Only a god can kill another god. Zeus left the child he had with the Amazons as a weapon to use against me.,14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+770,59,No. You liar. I compel you to tell me the truth.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+771,59,I am.,14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+772,59,"I am not the God of War, Diana, I am the God of Truth. Mankind stole this world from us. They ruined it day by day and I, the only one wise enough to see it, was left too weak to stop them. All these years, I have struggled alone, whispering into their ears. Ideas, inspiration for formulas, weapons, but I don't make them use them. They start these wars on their own. All I do is orchestrate an armistice I know they cannot keep, in the hope they will destroy themselves. But it has never been enough. Until you. When you first arrived, I was going to crush you. But I knew that if only you could see what the other gods could not, then you would join me, and with our powers combined, we could finally end all the pain, all the suffering, the destruction they bring. And we could return this world to the paradise it was before them. Forever.",14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+773,59,I… I could never be a part of that.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+774,59,"My dear, I don't want to fight you. But, if I must…",14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+775,59,Steve!,17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+776,59,"Come on, let's go! Sammy, let's go!",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+777,59,"Oh, my dear, you have so much to learn.",14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+778,59,Oh my god! What are we gonna do?,18,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1
+779,59,"There's not much we can do, if that's who I think it is. But we can stop that plane.",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+780,59,"If we can get on the radio, we can ask Flying Corps to shoot her down.",18,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1
+781,59,"No, if it crashes it'll wipe everyone out for 50 square miles. We gotta ground it!",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+782,59,"Bad news. It's on a timer. If we ground it here, it's the same thing.",17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1
+783,59,"Is it flammable, Chief?",5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+784,59,"Yes, you said it's hydrogen? It's flammable.",20,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+785,59,I need you guys to clear me a path to that plane.,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1
+786,59,"No, Steve!",18,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+787,59,"Hey, Steve! Come on!",17,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+788,59,Steve!,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+789,59,Let's see what kind of god you really are.,14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+790,59,"You will help me destroy them, Diana. Or you will die.",14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+791,59,"Come on, come on, let's go go go go go.",17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+792,59,"Do it boys, now!",18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1
+793,59,Is that all you have to offer?,14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+794,59,"It is futile to imagine you can win. Give up, Diana!",14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+795,59,"Chief, anything left?",18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+796,59,I got nothing!,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+797,59,Anything?,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+798,59,Nah.,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+799,59,"Yes, Diana. Take them all! Finally you see. Look at this world. Mankind did this, not me. They are ugly, filled with hatred, weak. Just like your Captain Trevor. Gone, and left you nothing. And for what? Pathetic! He deserved to burn!",14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+800,59,"Look at her and tell me I'm wrong. She is the perfect example of these humans and unworthy of your sympathy in every way. Destroy her, Diana. You know that she deserves it. They all do.",14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+801,59,Do it!,14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+802,60,"What are you saying? Steve, whatever it is, I can do it.",1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+803,60,"No, no.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+804,60,Let me do it.,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+805,60,"No. It has to be me. I can save today, you can save the world.",5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+806,60,I wish we had more time.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+807,60,What? What are you saying?,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+808,60,I love you.,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+809,61,You're wrong about them.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+810,61,"They're everything you say, but so much more.",1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+811,61,Lies!,14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+812,61,They do not deserve your protection!,14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+813,61,It's not about deserve. It's about what you believe. And I believe in love.,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+814,61,Then I will destroy you!,14,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+815,61,"Goodbye, brother.",1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0

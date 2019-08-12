@@ -1,0 +1,335 @@
+---
+title: "Reproducing the *Diana in the World of Men* paper"
+author: "Pete Jones"
+output: html_notebook
+---
+
+## Introduction
+
+> "Be careful in the world of men, Diana. They don't deserve you."
+> 
+> --- Hippolyta, Queen of the Amazons, in *Wonder Woman*.
+
+In this notebook I will walk through the process of reproducing the analysis in 
+[my 2018 paper](https://doi.org/10.1080/14680777.2018.1510846) exploring the 
+gendered character positions in *Wonder Woman*^[If you are interested in reading 
+the paper but don't have access to the journal, get in touch and I can provide
+you with a free eprint] from the raw dialogue data. The paper compares gendered character positions in *Wonder Woman* with two other films: *Thor* (2011) and 
+*The Hunger Games* (2012). 
+
+Make sure that the data folder is in the same directory as this notebook. The following packages will also need to be installed for the code to run smoothly: 
+
+```{r eval=FALSE}
+install.packages("extrafont")
+install.packages("igraph")
+install.packages("ggplot2")
+install.packages("ggraph")
+install.packages("graphlayouts")
+install.packages("scales")
+```
+
+## *Wonder Woman*
+
+### Reading in the *Wonder Woman* data
+
+Building on the notebook `01-FilmPipeline.Rmd` in the parent 
+directory, we will source in the functions and follow most of the steps of that 
+pipeline.
+
+```{r}
+source('film-functions.R')
+```
+
+Now we can read in the raw data,
+
+```{r}
+read.film('data/wwlines.csv', 'data/wwchars.csv')
+```
+
+and check it for errors.
+
+```{r}
+check.for.errors()
+```
+
+### Is *Wonder Woman* female-led?
+
+One of the arguments made in the paper is that the character interaction 
+network data for *Wonder Woman* calls into question the idea that the film is 
+'female-led'. 
+
+We can find evidence for this claim in the node list for the film, which is 
+where the figures for the number of lines spoken and received by each character 
+can be found.
+
+```{r message=FALSE}
+knitr::kable(chars)
+```
+
+As we can see, Diana speaks notably less than Steve. As well as this, we can 
+see that Diana is spoken to more than she speaks, while Steve speaks more than 
+he is spoken to.
+
+Is this just an anomaly (e.g. the result of a couple of scenes where he speaks 
+much more than her)? In the paper, I argued that *no*, it is not an anomaly, as:
+
+> Beginning with the first scene in which Steve speaks, Steve has more lines 
+than Diana in 69.6% of all ensuing scenes in which one of the two characters 
+speaks.
+
+To show how I got that figure, I created a test to check exactly that:
+
+```{r}
+steve.speaks.more <- function(){
+  # The first scene in which Steve speaks
+  steve.scene.1 <- lines[min(which(lines[,3]==5)),2]
+  # The first line in the first scene in which Steve speaks
+  enter.steve <- min(which(lines[,2]==steve.scene.1))
+  # The lines spoken by Steve or Diana:
+  sdlines <- which(lines[enter.steve:nrow(lines),3] %in% c(1,5))+(enter.steve-1)
+  # Get the scenes in which at least one of them speaks:
+  sdscenes <- unique(lines[sdlines,2])
+  # Create a vector to store whether Steve speaks more in each of these scenes
+  steve.wins <- vector(mode="logical", length = length(sdscenes))
+  # Find the percentage of these scenes in which Steve speaks more than Diana
+  k <- 0
+  for (scene in sdscenes){
+    k <- k+1
+    # test whether Steve's lines outnumber Diana's lines in each scene
+    steve.wins[k] <- length(which(lines[,2]==scene & lines[,3]==5)) > 
+      length(which(lines[,2]==scene & lines[,3]==1))
+  }
+  # Print the percentage which are TRUE (i.e. Steve speaks more)
+  round((length(which(steve.wins)==TRUE)/length(steve.wins))*100, digits=2)
+}
+```
+
+Which, when run, tells us:
+
+```{r}
+steve.speaks.more()
+```
+
+So it's clear that Steve does more of the talking than Diana. The summary table 
+for the distribution of dialogue and named speaking characters by gender 
+suggests that the pattern holds for males and females in general in the film:
+
+```{r paged.print=FALSE}
+film.summary.gender()
+```
+
+Although 55% of the speaking characters (11 out of 20) are female, only 43% of 
+the lines are actually spoken by women. Female characters are more likely to be 
+the recipients of dialogue than to speak, and the reverse is true for men. 
+
+This illustrates another key claim in the paper: we should be aware of the limitations of knowing only the gendered distribution of speaking characters 
+when thinking about the marginalisation of women's voices in Hollywood cinema. 
+
+Yearly reports from the [Annenberg Inclusion Initiative](https://annenberg.usc.edu/research/aii#inequality) and the [Centre for the Study of Women in Television and 
+Film](https://womenintvfilm.sdsu.edu/wp-content/uploads/2019/02/2018_Its_a_Mans_Celluloid_World_Report.pdf) tell us what percentage of speaking characters in 
+top-grossing films are female, typically finding the figure to be around 30%. 
+This is the most sophisticated systematic evidence we have on the 
+marginalisation of the female voice in mainstream Hollywood narratives. 
+
+However, the *Wonder Woman* data illustrates the limitations 
+of relying on such figures, as the distributions of speaking characters and 
+dialogue diverge significantly (largely due to the fact that 8 of the 11 female characters do not appear on screen at all in the final 102 minutes of the film).
+
+This should serve as a reminder that when content analyses tell us that 30% of 
+the speaking characters in a given year were female, this does not mean that 
+30% of the dialogue was actually spoken by women.
+
+The numbers so far raise questions over the idea that *Wonder Woman* is a 
+"female-led" film. 
+
+These questions are further illustrated by plotting the graph:
+
+```{r message=FALSE, fig.width=11, fig.height=7.5}
+plot.film.gg(filmtitle="Wonder Woman")
+```
+
+We can see that Steve and Diana occupy virtually the same positions in the 
+character interaction system, and Diana's neighbourhood is nearly identical to Steve's. In fact...
+
+How many characters does Diana speak to? 
+
+```{r}
+length(which(adj[1,]>0))
+```  
+
+One of these is Steve, so that leaves 16 characters in Diana's neighbourhood 
+that Steve could also talk to. How many does he actually talk to?
+
+```{r} 
+sum(which(adj[5,]>0) %in% which(adj[1,]>0))
+```  
+
+Steve speaks to 14 of the 16 characters in Diana's neighbourhood that aren't 
+him. Of the two he doesn't also speak to, one is Antiope, who dies in the scene 
+in which Steve is introduced. 
+
+From this perspective, it is hard to see how we could describe Diana as 
+independent from Steve, when it seems that almost all of her character 
+interactions need to be reinforced by Steve. Her narrative is *their* narrative.
+
+### Power-with
+
+Another thing which is evident from the network diagram is that, factoring in 
+the fact that the Amazons do not appear in the final 102 minutes of the film, 
+Diana has very few opportunities to interact with other women. Once she leaves Themyscira with Steve, she really is in the World of Men, where the only other 
+women are a secretary and a disfigured chemist, both of whom work in service of 
+much more central male characters. This means that there are no opportunities 
+for a collective mode of empowerment in the film, wherein women work together 
+and find strength in solidarity. in the end, the strength Diana finds to 
+overcome Ares is not rooted in any kind of collective empowerment, it is rooted 
+in the heroic sacrifice of her male sidekick Steve. Indeed, the vast majority 
+of the narrative activity flows between these two characters. 
+
+## *Thor*
+
+We can compare the *Wonder Woman* data with the data from the 2011 Marvel 
+Studios film *Thor*. There are a lot of similarities between the films which 
+make for a fruitful comparison: both are superhero action film adaptations of 
+iconic mainstream comic book characters; both are estimated to have had a $150 million budget and were marketed to similar audiences; the title characters of 
+both films are demigods whose story is drawn from classical mythology; in the 
+plot of each film, the character travels from their mythical homeland to the 
+earth of mortals familiar to the audience, creating a fish-out-of-water 
+narrative in the second half of each film; and both characters are assisted by 
+a mortal love interest character of the opposite sex.
+
+Let's read in the film, this time specifying names for the objects so we can 
+keep everything in the same workspace.
+
+```{r}
+read.film('data/thorlines.csv', 'data/thorchars.csv', 
+          eventlist="thorlines", nodelist="thorchars", adjacency="thoradj")
+```
+
+```{r}
+check.for.errors(adjacency=thoradj, eventlist=thorlines)
+```
+
+Take a look at the distribution of dialogue and characters by gender:
+
+```{r paged.print=FALSE}
+film.summary.gender(thorchars)
+```
+
+Take a look at the character stats:
+
+```{r message=FALSE}
+knitr::kable(thorchars)
+```
+
+And plot the network:
+
+```{r message=FALSE, fig.width=11, fig.height=7.5}
+plot.film.gg(thoradj, thorchars, "Thor")
+```
+
+What does the *Thor* data show? Firstly, the hero-sidekick dynamic found in 
+*Wonder Woman* plays out quite differently in *Thor*. Thor clearly speaks more 
+lines than his sidekick Jane Foster. Moreover, Thor's neighbourhood is larger 
+than and independent from that of Jane - Thor speaks to 12 characters, of whom 
+Jane speaks to only 3 (Jane speaks to only 5 characters in total. Thor's 
+interactions don't need to be reinforced by Jane, and the narrative is enacted 
+in much broader terms than the heteroromantic dyad of Jane and Thor. Unlike 
+Diana in *Wonder Woman*, Thor is the clear leader of the narrative in *Thor*.
+
+## *The Hunger Games*
+
+Finally, we can compare the results with the 2012 film *The Hunger Games*, 
+which has attracted a lot of discussion for its gender representation.
+
+Read in the film:
+
+```{r}
+read.film('data/thglines.csv', 'data/thgchars.csv', 
+          eventlist="thglines", nodelist="thgchars", adjacency="thgadj")
+```
+
+```{r}
+check.for.errors(adjacency=thgadj, eventlist=thglines)
+```
+
+Take a look at the distribution of dialogue and characters by gender:
+
+```{r paged.print=FALSE}
+film.summary.gender(thgchars)
+```
+
+Take a look at the character stats:
+
+```{r message=FALSE}
+knitr::kable(thgchars)
+```
+
+
+And plot the network:
+
+```{r message=FALSE, fig.width=11, fig.height=7.5}
+plot.film.gg(thgadj, thgchars, "The Hunger Games")
+```
+
+Again, The Hunger Games shows very different narrative patterns to 
+Wonder Woman. Katniss speaks 81 more lines than any other character and is 
+spoken to more than twice as much as anyone else. Katniss also charts her own 
+way through the narrative, interacting with 12 other named speaking characters 
+in the film. Of these 12, Peeta speaks only to 5, Haymitch speaks to 3, and 
+Gale speaks to none. Katniss' narrative is much broader than any of these male 
+characters.
+
+Although only 43% of the named speaking characters are female (compared with 
+*Wonder Woman*'s 55%), female characters speak a higher share of the lines of 
+dialogue in *The Hunger Games* (45%) than in *Wonder Woman* (43%). Again, this 
+is a reminder of the limitations of knowing only the proportion of speaking 
+characters that are female as a metric of the vocal dimension of narrative 
+marginalisation.
+
+Finally, although Katniss is the clear vocal leader and narrative focus of 
+*The Hunger Games*, her position is not one of isolation among men, leading to 
+an individualised sense of empowerment-as-exceptionalism. Katniss' strength is 
+rooted in a number of positive relationships -- with her sister Prim, with her 
+mentor Effie, and most notably with fellow tribute Rue, with whom Katniss forms 
+an alliance in the arena which aims to subvert the violence of the Games through 
+wits, shared knowledge and solidarity. Strong female characters can be strong in 
+ways that show the importance of female relationships to one's empowerment.
+
+## Conclusion
+
+The upshot of all this, as I argue in the paper, is that it seems that 
+*Wonder Woman* is not quite as 'female-led' as it first appears, contrary to 
+the strong claims made in the critical reception to the film. The narrative 
+follows not Diana as an individual so much as it follows the Steve-Diana dyad 
+(a dyad which is led by Steve). Diana's strength is rooted in Steve. The 
+patterns that are revealed from looking at the interaction network data ask us 
+to think a little differently about the kind of narrative offered by 
+*Wonder Woman*, and the kind of empowerment its hero represents. *Thor* shows us 
+how a similar story can play out through a narrative which establishes a more 
+independent hero, while *The Hunger Games* shows us how a strong female 
+character can feature in a narrative in ways which not only establish her as a 
+clear, independent leader, but also develop her empowerment through 
+relationships with other female characters.
+
+That's about it for the material in the paper. Hopefully this notebook has: 
+
+- provided some transparency for the analyses in the paper.
+- provided an example of the character interaction network approach in action.
+
+Check out the next notebook `02-WW-text.Rmd` for some additional bits of text analysis on *Wonder Woman* I added after the original piece was published.
+
+#### Using the data
+
+If you want to use the data for anything (e.g. doing your own analysis, or just 
+using it as a teaching dataset), please feel free. The citation is:
+
+Jones, Pete. 2018. "Diana in the World of Men: a character network approach to analysing gendered vocal representation in *Wonder Woman*." 
+*Feminist Media Studies*, DOI: 10.1080/14680777.2018.1510846.
+
+#### Session information
+
+Below is the version and package dependency info used in producing this notebook.
+
+```{r}
+sessionInfo()
+```
