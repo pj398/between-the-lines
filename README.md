@@ -12,8 +12,8 @@ This is a work-in-progress, but for now the following notebooks are available:
 
 | Notebook  | HTML  |
 | -----	| ----- |
-| [01-FilmPipeline](01-FilmPipeline.Rmd) | [HTML](/docs/notebooks/01-FilmPipeline.html) |
-| [02-WonderWoman](02-WonderWoman.Rmd) | [HTML](/docs/notebooks/02-WonderWoman.html) |
+| [01-FilmPipeline](01-FilmPipeline.Rmd) | [HTML](https://pj398.github.io/between-the-lines/notebooks/01-FilmPipeline.html) |
+| [02-WonderWoman](02-WonderWoman.Rmd) | [HTML](https://pj398.github.io/between-the-lines/notebooks/02-WonderWoman.html) |
 | 03-DynamicCentrality |  Coming soon |
 
 `01-FilmPipeline` is an interactive notebook walking through the development of a simple pipeline for reading in the raw data, summarising and plotting the character interaction networks (all in R). It explains the purpose of the functions found in the `film-functions.R` script in this directory, which can be used to streamline the pipeline to a few lines of code which can then be used to read in, summarise and plot any new character interaction network data.
