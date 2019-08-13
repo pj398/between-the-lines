@@ -2,8 +2,8 @@
 
 - `data`: contains the data for reproducing analysis in my 2018 paper "[Diana in the World of Men...](https://doi.org/10.1080/14680777.2018.1510846)".
 - `film-functions.R`: a copy of the same file from the parent directory.
-- `01-WW-paper`: An interactive notebook walking through and reproducing the analysis from the 2018 paper (available as R Notebook and HTML).
-- `02-WW-text`: An interactive notebook walking through some additional text analysis which isn't in the 2018 paper but adds some additional analysis to the discussion (available as R Notebook and HTML).
+- [`01-WW-paper`](https://pj398.github.io/between-the-lines/notebooks/02-WonderWoman-paper.html): An interactive notebook walking through and reproducing the analysis from the 2018 paper (available as R Notebook and HTML).
+- [`02-WW-text`](https://pj398.github.io/between-the-lines/notebooks/02-WonderWoman-text.html): An interactive notebook walking through some additional text analysis which isn't in the 2018 paper but adds some additional analysis to the discussion (available as R Notebook and HTML).
 
 ---
 
