@@ -23,7 +23,7 @@ This is a work-in-progress, but for now the following notebooks are available:
 Next steps:
 - I will add a notebook containing the implementation of the dynamic narrative centrality measure I have presented at a number of recent conferences.
 - I will add the remaining data I have collected throughout my thesis.
-- Some exciting stuff bringing together everything here that I am keeping schtum about for now.
+- I will improve the code and package-ify everything I've done to make it easier to use.
 
 Stay tuned and let me know if I can be of any help.
 
