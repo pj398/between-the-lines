@@ -1,7 +1,9 @@
 ---
 title: "Reproducing the *Diana in the World of Men* paper"
 author: "Pete Jones"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
 
 ## Introduction
@@ -17,39 +19,47 @@ the paper but don't have access to the journal, get in touch and I can provide
 you with a free eprint] from the raw dialogue data. The paper compares gendered character positions in *Wonder Woman* with two other films: *Thor* (2011) and 
 *The Hunger Games* (2012). 
 
-Make sure that the data folder is in the same directory as this notebook. The following packages will also need to be installed for the code to run smoothly: 
+Make sure that the data folder is in the same directory as this notebook. The following packages will also need to be installed and loaded for the code to run smoothly: 
 
-```{r eval=FALSE}
-install.packages("extrafont")
-install.packages("igraph")
-install.packages("ggplot2")
-install.packages("ggraph")
-install.packages("graphlayouts")
-install.packages("scales")
+```{r message = FALSE}
+# install.packages("extrafont")
+# install.packages("igraph")
+# install.packages("ggplot2")
+# install.packages("ggraph")
+# install.packages("graphlayouts")
+# install.packages("network")
+# install.packages("scales")
+# install.packages("visNetwork")
+
+library(igraph, warn.conflicts = FALSE, quietly = TRUE)
+library(ggraph, quietly = TRUE)
+library(graphlayouts, quietly = TRUE)
+library(extrafont, quietly = TRUE)
+library(network, quietly = TRUE)
+library(scales, quietly = TRUE)
+library(visNetwork, quietly = TRUE)
 ```
 
 ## *Wonder Woman*
 
 ### Reading in the *Wonder Woman* data
 
-Building on the notebook `01-FilmPipeline.Rmd` in the parent 
-directory, we will source in the functions and follow most of the steps of that 
-pipeline.
+Building on the previous notebook `01-FilmPipeline.Rmd`, we will source in the functions and follow most of the steps of that pipeline.
 
 ```{r}
-source('film-functions.R')
+source("film-functions.R")
 ```
 
 Now we can read in the raw data,
 
 ```{r}
-read.film('data/wwlines.csv', 'data/wwchars.csv')
+ww_data <- qread_film("data/ww_lines.csv", "data/ww_chars.csv")
 ```
 
 and check it for errors.
 
 ```{r}
-check.for.errors()
+check_for_errors(ww_data$adjacency, ww_data$event_list)
 ```
 
 ### Is *Wonder Woman* female-led?
@@ -62,8 +72,8 @@ We can find evidence for this claim in the node list for the film, which is
 where the figures for the number of lines spoken and received by each character 
 can be found.
 
-```{r message=FALSE}
-knitr::kable(chars)
+```{r message = FALSE}
+knitr::kable(ww_data$node_list)
 ```
 
 As we can see, Diana speaks notably less than Steve. As well as this, we can 
@@ -80,42 +90,44 @@ speaks.
 To show how I got that figure, I created a test to check exactly that:
 
 ```{r}
-steve.speaks.more <- function(){
+steve_speaks_more <- function(lines = ww_data$event_list) {
   # The first scene in which Steve speaks
-  steve.scene.1 <- lines[min(which(lines[,3]==5)),2]
+  steve_scene_1 <- lines[min(which(lines[ , 3] == 5)), 2]
   # The first line in the first scene in which Steve speaks
-  enter.steve <- min(which(lines[,2]==steve.scene.1))
+  enter_steve <- min(which(lines[ , 2] == steve_scene_1))
   # The lines spoken by Steve or Diana:
-  sdlines <- which(lines[enter.steve:nrow(lines),3] %in% c(1,5))+(enter.steve-1)
+  sdlines <- which(lines[enter_steve:nrow(lines), 3] %in% c(1, 5)) + 
+    (enter_steve - 1)
   # Get the scenes in which at least one of them speaks:
-  sdscenes <- unique(lines[sdlines,2])
+  sdscenes <- unique(lines[sdlines, 2])
   # Create a vector to store whether Steve speaks more in each of these scenes
-  steve.wins <- vector(mode="logical", length = length(sdscenes))
+  steve_wins <- vector(mode = "logical", length = length(sdscenes))
   # Find the percentage of these scenes in which Steve speaks more than Diana
   k <- 0
-  for (scene in sdscenes){
-    k <- k+1
+  for (scene in sdscenes) {
+    k <- k + 1
     # test whether Steve's lines outnumber Diana's lines in each scene
-    steve.wins[k] <- length(which(lines[,2]==scene & lines[,3]==5)) > 
-      length(which(lines[,2]==scene & lines[,3]==1))
+    steve_wins[k] <- length(which(lines[ , 2] == scene & lines[ , 3] == 5)) > 
+      length(which(lines[ , 2] == scene & lines[ , 3] == 1))
   }
   # Print the percentage which are TRUE (i.e. Steve speaks more)
-  round((length(which(steve.wins)==TRUE)/length(steve.wins))*100, digits=2)
+  round((length(which(steve_wins) == TRUE) / length(steve_wins)) * 100, 
+        digits = 2)
 }
 ```
 
 Which, when run, tells us:
 
 ```{r}
-steve.speaks.more()
+steve_speaks_more()
 ```
 
 So it's clear that Steve does more of the talking than Diana. The summary table 
 for the distribution of dialogue and named speaking characters by gender 
 suggests that the pattern holds for males and females in general in the film:
 
-```{r paged.print=FALSE}
-film.summary.gender()
+```{r paged.print = FALSE}
+film_summary_gender(ww_data$node_list)
 ```
 
 Although 55% of the speaking characters (11 out of 20) are female, only 43% of 
@@ -144,8 +156,9 @@ The numbers so far raise questions over the idea that *Wonder Woman* is a
 
 These questions are further illustrated by plotting the graph:
 
-```{r message=FALSE, fig.width=11, fig.height=7.5}
-plot.film.gg(filmtitle="Wonder Woman")
+```{r message = FALSE, fig.width = 11, fig.height = 7.5}
+plot_film_gg(ww_data$adjacency, ww_data$node_list, 
+             filmtitle = "Wonder Woman (2017)")
 ```
 
 We can see that Steve and Diana occupy virtually the same positions in the 
@@ -154,14 +167,14 @@ character interaction system, and Diana's neighbourhood is nearly identical to S
 How many characters does Diana speak to? 
 
 ```{r}
-length(which(adj[1,]>0))
+length(which(ww_data$adjacency[1, ] > 0))
 ```  
 
 One of these is Steve, so that leaves 16 characters in Diana's neighbourhood 
 that Steve could also talk to. How many does he actually talk to?
 
 ```{r} 
-sum(which(adj[5,]>0) %in% which(adj[1,]>0))
+sum(which(ww_data$adjacency[5, ] > 0) %in% which(ww_data$adjacency[1, ] > 0))
 ```  
 
 Steve speaks to 14 of the 16 characters in Diana's neighbourhood that aren't 
@@ -201,30 +214,29 @@ Let's read in the film, this time specifying names for the objects so we can
 keep everything in the same workspace.
 
 ```{r}
-read.film('data/thorlines.csv', 'data/thorchars.csv', 
-          eventlist="thorlines", nodelist="thorchars", adjacency="thoradj")
+thor_data <- qread_film("data/thor_lines.csv", "data/thor_chars.csv")
 ```
 
 ```{r}
-check.for.errors(adjacency=thoradj, eventlist=thorlines)
+check_for_errors(thor_data$adjacency, thor_data$event_list)
 ```
 
 Take a look at the distribution of dialogue and characters by gender:
 
-```{r paged.print=FALSE}
-film.summary.gender(thorchars)
+```{r paged.print = FALSE}
+film_summary_gender(thor_data$node_list)
 ```
 
 Take a look at the character stats:
 
-```{r message=FALSE}
-knitr::kable(thorchars)
+```{r message = FALSE}
+knitr::kable(thor_data$node_list)
 ```
 
 And plot the network:
 
-```{r message=FALSE, fig.width=11, fig.height=7.5}
-plot.film.gg(thoradj, thorchars, "Thor")
+```{r message = FALSE, fig.width = 11, fig.height = 7.5}
+plot_film_gg(thor_data$adjacency, thor_data$node_list, "Thor (2011)")
 ```
 
 What does the *Thor* data show? Firstly, the hero-sidekick dynamic found in 
@@ -244,31 +256,30 @@ which has attracted a lot of discussion for its gender representation.
 Read in the film:
 
 ```{r}
-read.film('data/thglines.csv', 'data/thgchars.csv', 
-          eventlist="thglines", nodelist="thgchars", adjacency="thgadj")
+thg_data <- qread_film("data/thg_lines.csv", "data/thg_chars.csv")
 ```
 
 ```{r}
-check.for.errors(adjacency=thgadj, eventlist=thglines)
+check_for_errors(thg_data$adjacency, thg_data$event_list)
 ```
 
 Take a look at the distribution of dialogue and characters by gender:
 
-```{r paged.print=FALSE}
-film.summary.gender(thgchars)
+```{r paged.print = FALSE}
+film_summary_gender(thg_data$node_list)
 ```
 
 Take a look at the character stats:
 
-```{r message=FALSE}
-knitr::kable(thgchars)
+```{r message = FALSE}
+knitr::kable(thg_data$node_list)
 ```
 
 
 And plot the network:
 
-```{r message=FALSE, fig.width=11, fig.height=7.5}
-plot.film.gg(thgadj, thgchars, "The Hunger Games")
+```{r message = FALSE, fig.width = 11, fig.height = 7.5}
+plot_film_gg(thg_data$adjacency, thg_data$node_list, "The Hunger Games (2012)")
 ```
 
 Again, The Hunger Games shows very different narrative patterns to 
@@ -316,7 +327,7 @@ That's about it for the material in the paper. Hopefully this notebook has:
 - provided some transparency for the analyses in the paper.
 - provided an example of the character interaction network approach in action.
 
-Check out the next notebook `02-WW-text.Rmd` for some additional bits of text analysis on *Wonder Woman* I added after the original piece was published.
+Check out the next notebook `03-WonderWoman-text.Rmd` for some additional bits of text analysis on *Wonder Woman* I added after the original piece was published.
 
 #### Using the data
 

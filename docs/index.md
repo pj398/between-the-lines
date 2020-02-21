@@ -8,12 +8,12 @@ This is a project page for sharing data, tools and info related to my research o
 
 View the interactive notebooks for work associated with the research here:
 
-| Notebook | HTML |
-| --- | --- |
-| [01-FilmPipeline](/notebooks/01-FilmPipeline.html) | [01-FilmPipeline](/notebooks/01-FilmPipeline.html) |
-| [02-WonderWoman](/notebooks/02-WonderWoman.html)  | [02-WonderWoman-paper](/notebooks/02-WonderWoman-paper.html) |
-|  | [02-WonderWoman-text](/notebooks/02-WonderWoman-text.html) |
-| 03-DynamicCentrality  | Coming soon |
+| Notebook (RMarkdown) | HTML  |
+| -----	| ----- |
+| [01-FilmPipeline](https://github.com/pj398/between-the-lines/blob/master/01-FilmPipeline.Rmd) | [View online](https://pj398.github.io/between-the-lines/notebooks/01-FilmPipeline.html) |
+| [02-WonderWoman-paper](https://github.com/pj398/between-the-lines/blob/master/02-WonderWoman-paper.Rmd) | [View online](https://pj398.github.io/between-the-lines/notebooks/02-WonderWoman-paper.html) |
+| [03-WonderWoman-text](https://github.com/pj398/between-the-lines/blob/master/03-WonderWoman-text.Rmd) | [View online](https://pj398.github.io/between-the-lines/notebooks/03-WonderWoman-text.html) |
+| 04-DynamicCentrality |  Coming soon |
 
 ## Contact
 

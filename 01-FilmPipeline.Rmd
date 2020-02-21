@@ -1,114 +1,118 @@
 ---
 title: "Analysing movie dialogue networks in R"
 author: "Pete Jones"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
 
 ## Introduction  
 
-This notebook works through the development of a basic workflow for reading in, describing, and visualising film dialogue network data in R. The notebook will
-use data for the film *Frozen* (2013) as an illustrative example and aims to be entirely reproducible.  
+This notebook works through the development of a basic workflow for reading in, describing, and visualising film dialogue network data in R. The notebook will use data for the film *Frozen* (2013) as an illustrative example and aims to be entirely reproducible.  
 
-Make sure you have the `data` directory in the same folder as this notebook 
-file.  
+Make sure you have the `data` directory in the same folder as this notebook file.  
 
 ## Reading in the data  
 
-First, create a function `read.film` for reading in the dialogue data as 
-collected in the raw data files.  
+First, create a function `qread_film` for reading in the dialogue data as collected in the raw data files.  
 
-This function takes several arguments:  
+This function takes three arguments:  
 
 * edge.file: the csv file containing the edges
 * node.file: the csv file containing the node info
-* eventlist: specify the name to be used for the event list object in R 
-(default is `"lines"`) 
-* nodelist: specify the name to be used for the node list object in R 
-(default is `"chars"`) 
-* adjacency: specify the name to be used for the adjacency matrix object in R 
-(default is `"adj"`)
-* offset: specify the position of the "speakerID" column relative to the 
-default which is column 3 (this is useful if the function is used on data which
-collects data using additional or fewer columns)  
+* offset: specify the position of the "speakerID" column relative to the default which is column 3 (this is useful if the function is used on data which collects data using additional or fewer columns, as will be clear in [03-WonderWoman-text](/03-WonderWamn-text.Rmd))  
 
-The name specification options are useful if you want to have data for more 
-than one film in the workspace at the same time, but if handling one film at a 
-time (as in this notebook), then the defaults are fine and only the raw data 
-file names need to be specified. 
+and returns a list with three elements:  
+
+1. The event list. Each row contains information on a line of dialogue, with columns corresponding to `eventID`, `sceneID`, `speakerID`, and dummy variables for each recipient.
+2. The node list. Rows correspond to named speaking characters, with columns corresponding to variables for ID, name, total lines spoken (`nlines`), total times spoken to (`linesin`), and gender.
+3. The adjacency matrix. This is derived from the event list through aggregation and can be useful for static purposes such as visualising the network as a sociogram.
 
 ```{r}
-read.film <- function(edge.file, node.file, eventlist="lines", 
-                      nodelist="chars", adjacency = "adj", offset=0) {
+qread_film <- function(edge.file, node.file, offset = 0) {
   # First, let's read in the event list and the node list
-  lines <- read.csv(edge.file, sep=',', stringsAsFactors = FALSE)
+  lines <- read.csv(edge.file, sep = ',', stringsAsFactors = FALSE)
   # Now, let's read in the node list and add some attributes we'll want later
-  chars <- read.csv(node.file, sep=',', stringsAsFactors = FALSE)
+  chars <- read.csv(node.file, sep = ',', stringsAsFactors = FALSE)
   chars$nlines <- vector("numeric", nrow(chars))
   for (i in 1:nrow(chars)) {
-    chars$nlines[i] <- length(which(lines[,(3+offset)]==i))
+    chars$nlines[i] <- length(which(lines[ , (3 + offset)] == i))
   }
-  chars$linesin <- colSums(lines[,(4+offset):ncol(lines)])
-  chars$gender <- ifelse(chars$charfem==1,"Female","Male")
-  if((FALSE %in% (apply(lines, 2, class) %in% "integer"))==FALSE) {
+  chars$linesin <- colSums(lines[ , (4 + offset):ncol(lines)])
+  chars$gender <- ifelse(chars$char_female == 1, "Female", "Male")
+  # This makes sure the code runs with non-numeric input (it's a hacky fix):
+  if((FALSE %in% (apply(lines, 2, class) %in% "integer")) == FALSE) {
     lines <- as.matrix(lines)
   }
+
   # Create adjacency matrix from the event list
-  adj <- matrix(0,nrow(chars),nrow(chars))
+  adj <- matrix(0, nrow(chars), nrow(chars))
   for (i in 1:nrow(chars)) {
     for (j in 1:nrow(chars)) {
-      adj[i,j] <- length(which(lines[,3+offset]==i&lines[,j+3+offset]==1))
+      adj[i,j] <- length(which(lines[ , 3 + offset] == i &
+                                 lines[ , j + (3 + offset)] == 1))
     }
   }
-  colnames(adj) <- chars$character.name
-  rownames(adj) <- chars$character.name
-  
-  # Assign the output objects to the global environment
-  assign(eventlist, lines, pos = ".GlobalEnv")
-  assign(nodelist, chars, pos = ".GlobalEnv")
-  assign(adjacency, adj, pos = ".GlobalEnv")
+  colnames(adj) <- chars$char_name
+  rownames(adj) <- chars$char_name
+
+  list(event_list = lines, node_list = chars, adjacency = adj)
 }
 ```
 
 Run the function on the Frozen directed dialogue data to read it into R.
 
-```{r message=FALSE}
-read.film(edge.file="data/frozenlines.csv", node.file="data/frozenchars.csv")
+```{r message = FALSE}
+frozen <- qread_film(edge.file="data/frozen_lines.csv", 
+                     node.file="data/frozen_chars.csv")
 ```
 
 Check the data for identifiable data entry errors.
 
 ```{r}
 # Create a function to check for data entry errors.
-check.for.errors <- function(adjacency = adj, eventlist = lines, rec=4) {
-  self.ties <- vector("numeric", length = nrow(adjacency))
+check_for_errors <- function(adjacency = NULL, eventlist = NULL, 
+                             start.column = 4) {
+  if(is.null(adjacency)) {
+    stop("Please provide an adjacency matrix via the 'adjacency' argument")
+  }
+  if(is.null(eventlist)) {
+    stop("Please provide an event list via the 'eventlist' argument")
+  }
+  
+  self_ties <- vector("numeric", length = nrow(adjacency))
   # Check diagonal for self-ties
   for (i in 1:nrow(adjacency)){
-    if(adjacency[i,i]>0){
-      self.ties[i] <- 1
+    if(adjacency[i, i] > 0) {
+      self_ties[i] <- 1
     } else {
-      self.ties[i] <- 0
+      self_ties[i] <- 0
     }
   }
-  if(length(which(self.ties>0))>0){
-    cat("Characters with self-ties: ", which(self.ties>0))
+  if(length(which(self_ties > 0)) > 0) {
+    cat("Characters with self-ties: ", which(self_ties > 0))
   } else {
     cat("No characters with self-ties found.")
   }
   cat("\n")
   # Check for empty rows (no recipients indicated)
-  if(length(which(rowSums(eventlist[,rec:ncol(eventlist)])==0))>0){
-    cat("Empty rows: ", which(rowSums(eventlist[,rec:ncol(eventlist)])==0))
+  if(length(which(rowSums(eventlist[ , start.column:ncol(eventlist)]) == 0)) > 0)
+    {
+    cat("Empty rows: ", 
+        which(rowSums(eventlist[ , start.column:ncol(eventlist)]) == 0))
   } else {
     cat("No empty rows found.")
   }
   # Check for other data entry errors (cell values not in c(0, 1))
-  if(FALSE %in% unique(c(as.matrix(lines)[,rec:ncol(lines)])) %in% c("0","1")) {
-    cat("\nData entry values: ", unique(c(as.matrix(lines)[,rec:ncol(lines)])))
+  if(FALSE %in% unique(c(as.matrix(eventlist)[ , start.column:ncol(eventlist)])) 
+     %in% c("0", "1")) {
+    cat("\nData entry values: ", 
+        unique(c(as.matrix(eventlist)[ , start.column:ncol(eventlist)])))
   }
 }
 
 # Run the check
-check.for.errors()
+check_for_errors(adjacency = frozen$adjacency, eventlist = frozen$event_list)
 ```
 
 ## Viewing and describing the data  
@@ -116,67 +120,75 @@ check.for.errors()
 Now we can take a look at the event list:
 
 ```{r}
-head(lines)
+head(frozen$event_list)
 ```
 
 and the node list:
 
-```{r message=FALSE}
-knitr::kable(chars)
+```{r message = FALSE}
+knitr::kable(frozen$node_list)
 ```
 
 and finally the adjacency matrix:
 
 ```{r}
-adj
+frozen$adjacency
 ```
 
 We can create a couple of descriptive tables for the data, one summarising
 some film-level metadata: 
 
 ```{r}
-film.summary <- function(eventlist = lines, offset=0) {
-  scenecount <- length(unique(eventlist[,2]))
-  linecount <- length(unique(eventlist[,1]))
-  charcount <- length(unique(eventlist[,3+offset]))
-  filmsum <- data.frame(scenecount,linecount,charcount)
-  colnames(filmsum) <- c("No. scenes","No. lines","No. characters")
+film_summary <- function(eventlist = NULL, offset = 0) {
+  if(is.null(eventlist)) {
+    stop("Please provide an event list via the 'eventlist' argument")
+  }
+  scenecount <- length(unique(eventlist[ , 2]))
+  linecount <- length(unique(eventlist[ , 1]))
+  charcount <- length(unique(eventlist[ , 3 + offset]))
+  filmsum <- data.frame(scenecount, linecount, charcount)
+  colnames(filmsum) <- c("No. scenes", "No. lines", 
+                         "No. characters")
   print(filmsum, row.names = FALSE)
 }
 ```
 
-```{r paged.print=FALSE}
-film.summary()
+```{r paged.print = FALSE}
+film_summary(frozen$event_list)
 ```
 
 and one summarising the gendered distribution of characters & dialogue:
 
 ```{r}
-film.summary.gender <- function(nodelist = chars) {
+film_summary_gender <- function(nodelist = NULL) {
+  if(is.null(nodelist)) {
+    stop("Please provide a node list via the 'nodelist' argument")
+  }
   # Calculate the proportion of named speaking characters that are female
-  numfemales <- length(which(nodelist$charfem==1))
-  nummales <- length(which(nodelist$charfem==0))
-  propfemchars <- (numfemales/(numfemales+nummales))*100
+  numfemales <- length(which(nodelist$char_female == 1))
+  nummales <- length(which(nodelist$char_female == 0))
+  propfemchars <- (numfemales / (numfemales + nummales)) * 100
   # Calculate the proportion of lines spoken by females
-  propfemlines <- (sum(nodelist$nlines[which(nodelist$charfem==1)])/
-                     (sum(nodelist$nlines[which(nodelist$charfem==1)])+
-                        sum(nodelist$nlines[which(nodelist$charfem==0)])))*100
+  propfemlines <- (sum(nodelist$nlines[which(nodelist$char_female == 1)]) / 
+                     (sum(nodelist$nlines[which(nodelist$char_female == 1)]) + 
+                        sum(nodelist$nlines[which(nodelist$char_female == 0)]))) * 100
   # Calculate the proportion of total recipients of dialogue that are female
-  propfemlinesin <- (sum(nodelist$linesin[which(nodelist$charfem==1)])/
-                       (sum(nodelist$linesin[which(nodelist$charfem==1)])+
-                          sum(nodelist$linesin[which(nodelist$charfem==0)])))*100
+  propfemlinesin <- (sum(nodelist$linesin[which(nodelist$char_female == 1)]) /
+                       (sum(nodelist$linesin[which(nodelist$char_female == 1)]) +
+                          sum(nodelist$linesin[which(nodelist$char_female == 0)]))) * 100
   # Return a table summarising each
   filmsumg <- data.frame(round(propfemchars, digits=2), 
                          round(propfemlines, digits=2),
                          round(propfemlinesin, digits=2))
-  colnames(filmsumg) <- c("% characters female","% lines out female",
+  colnames(filmsumg) <- c("% characters female", 
+                          "% lines out female", 
                           "% lines in female")
-  print(filmsumg, row.names=FALSE)
+  print(filmsumg, row.names = FALSE)
 }
 ```
 
-```{r paged.print=FALSE}
-film.summary.gender()
+```{r paged.print = FALSE}
+film_summary_gender(frozen$node_list)
 ```
 
 ## Plotting the network  
@@ -184,17 +196,25 @@ film.summary.gender()
 #### Packages  
 
 To run all the code in this section smoothly, ensure you have the following 
-packages installed:
+packages installed and loaded:
 
-```{r eval=FALSE}
-install.packages("extrafont")
-install.packages("igraph")
-install.packages("ggplot2")
-install.packages("ggraph")
-install.packages("graphlayouts")
-install.packages("network")
-install.packages("scales")
-install.packages("visNetwork")
+```{r message = FALSE}
+# install.packages("extrafont")
+# install.packages("igraph")
+# install.packages("ggplot2")
+# install.packages("ggraph")
+# install.packages("graphlayouts")
+# install.packages("network")
+# install.packages("scales")
+# install.packages("visNetwork")
+
+library(igraph, warn.conflicts = FALSE, quietly = TRUE)
+library(ggraph, quietly = TRUE)
+library(graphlayouts, quietly = TRUE)
+library(extrafont, quietly = TRUE)
+library(network, quietly = TRUE)
+library(scales, quietly = TRUE)
+library(visNetwork, quietly = TRUE)
 ```
 
 #### Using ggraph  
@@ -202,143 +222,157 @@ install.packages("visNetwork")
 To produce a nice network visualisation using a combination of the R packages
 `ggraph`, `graphlayouts`:
 
-```{r results="hide"}
+```{r results = "hide"}
 # Create a function for plotting the network
-plot.film.gg <- function(my.adj=adj, nodelist=chars,  filmtitle="") {
-  library(igraph, warn.conflicts = FALSE, quietly = TRUE)
-  library(ggraph, quietly = TRUE)
-  library(graphlayouts, quietly = TRUE)
-  library(extrafont, quietly = TRUE)
-  library(scales, quietly = TRUE)
+plot_film_gg <- function(adjacency = NULL, nodelist = NULL,  
+                         filmtitle = "") {
+  if(is.null(adjacency)) {
+    stop("Please provide an adjacency matrix via the 'adjacency' argument")
+  }
+  if(is.null(nodelist)) {
+    stop("Please provide a node list via the 'nodelist' argument")
+  }
+ 
   # Create the igraph object
-  g <- graph_from_adjacency_matrix(my.adj, weighted=TRUE, diag=FALSE)
+  g <- igraph::graph_from_adjacency_matrix(adjacency, weighted = TRUE, 
+                                           diag = FALSE)
   V(g)$gender <- nodelist$gender
-  V(g)$name <- nodelist$character.name
-  V(g)$size <- rescale(nodelist$nlines, to=c(2,15))
-  g <- reorder_edges(g, "weight", desc = FALSE)
+  V(g)$name <- nodelist$char_name
+  V(g)$size <- scales::rescale(nodelist$nlines, to = c(2, 15))
+  g <- graphlayouts::reorder_edges(g, "weight", desc = FALSE)
   # Create the ggraph plot
   p <-  ggraph(g, layout = "stress") +
-    geom_edge_link(aes(colour=weight, 
-                       start_cap=circle(node1.size*1.1, unit="pt"),
-                       end_cap=circle(node2.size*1.1, unit="pt")), n=2, 
-                   arrow = arrow(angle=20,length=unit(0.14, "inches"), 
-                                 ends="last", type="closed")) +
-    geom_node_point(aes(fill=gender), size = V(g)$size, shape=21, stroke=0.5,
-                    colour="black") +
-    geom_node_text(aes(label=name), size=4.5, 
-                   nudge_y=rescale(V(g)$size, to=c(0.06,0.15))) +
-    scale_fill_manual(values = c("Male"="#55467a","Female"="#ded649"), 
+    geom_edge_link(aes(colour = weight, 
+                       start_cap = circle(node1.size*1.1, unit = "pt"),
+                       end_cap = circle(node2.size*1.1, unit = "pt")), n = 2, 
+                   arrow = arrow(angle = 20,length = unit(0.14, "inches"), 
+                                 ends = "last", type = "closed")) +
+    geom_node_point(aes(fill = gender), size = V(g)$size, shape = 21, 
+                    stroke = 0.5, colour = "black") +
+    geom_node_text(aes(label = name), size = 4.5, 
+                   nudge_y = scales::rescale(V(g)$size, to = c(0.06, 0.15))) +
+    scale_fill_manual(values = c("Male" = "#55467a", "Female" = "#ded649"), 
                       aesthetics = c("fill")) +
-    scale_edge_color_gradient(low="grey85", high="grey25",trans="sqrt") +
+    scale_edge_color_gradient(low = "grey85", high = "grey25", trans = "sqrt") +
     labs(title = paste0("Character interactions in ", filmtitle)) +
     scale_x_continuous(expand = c(0.1, 0.1)) +
     theme_graph() +
-    theme(legend.position="none", plot.title=element_text(size=16, hjust=0.5))
+    theme(legend.position = "none", 
+          plot.title = element_text(size = 16, hjust = 0.5))
   # And plot it!
   plot(p)
 }
 ```
 
-```{r message=FALSE, fig.width=11, fig.height=8}
-plot.film.gg(filmtitle = "Frozen (2013)")
+```{r message = FALSE, fig.width = 11, fig.height = 8}
+plot_film_gg(adjacency = frozen$adjacency, nodelist = frozen$node_list, 
+             filmtitle = "Frozen (2013)")
 ```
 
 #### Using network  
 
 For a simpler approach with fewer package dependencies, we could just plot
-using `network::plot`:
+using the `network` package and R's base graphics plotting:
 
-```{r message=FALSE}
-plot.film.basic <- function(nodelist=chars, my.adj=adj, filmtitle="", 
-                            legend=FALSE) {
-  library(network, quietly = TRUE)
+```{r message = FALSE}
+plot_film_basic <- function(adjacency = NULL, nodelist = NULL, 
+                            filmtitle = "", legend = FALSE) {
+  if(is.null(adjacency)) {
+    stop("Please provide an adjacency matrix via the 'adjacency' argument")
+  }
+  if(is.null(nodelist)) {
+    stop("Please provide a node list via the 'nodelist' argument")
+  }
+  
   # Create network object from adjacency matrix
-  filmnet <- network(my.adj)
+  filmnet <- network(adjacency)
   # Plot the network
-  plot(filmnet, label=nodelist$character.name, edge.col='lightpink1', 
-       vertex.cex=sqrt(nodelist$nlines)/3, label.pos=3, arrowhead.cex=0.7,
-       vertex.col=ifelse(nodelist$charfem==1, "#ded649", "#55467a"), 
-       main=paste0("Character interactions in ", filmtitle))
-  if (legend==TRUE) {
-    legend(x="right", c("Male","Female"), pch=21, y.intersp=0.8, 
-           pt.bg=c('#55467a','#ded649'), pt.cex=2.5, cex=1.2, 
-           bty="n", ncol=1)
+  plot(filmnet, label = nodelist$char_name, edge.col = 'lightpink1', 
+       vertex.cex = sqrt(nodelist$nlines)/3, label.pos = 3, arrowhead.cex = 0.7,
+       vertex.col = ifelse(nodelist$char_female == 1, "#ded649", "#55467a"), 
+       main = paste0("Character interactions in ", filmtitle))
+  if (legend == TRUE) {
+    legend(x = "right", c("Male", "Female"), pch = 21, y.intersp = 0.8, 
+           pt.bg = c('#55467a','#ded649'), pt.cex = 2.5, cex = 1.2, 
+           bty = "n", ncol = 1)
   }
 }
 ```
 
-```{r message=FALSE, fig.width=11, fig.height=8}
-plot.film.basic(filmtitle="Frozen (2013)")
+```{r message = FALSE, fig.width = 11, fig.height = 8}
+plot_film_basic(adjacency = frozen$adjacency, nodelist = frozen$node_list, 
+             filmtitle = "Frozen (2013)")
 ```
 
 #### Using visNetwork  
 
 Or for something more interactive, we can use the `visNetwork` package:
 
-```{r message=FALSE}
-plot.film.html <- function(my.adj = adj, nodelist = chars, savenet = FALSE, 
+```{r message = FALSE}
+plot_film_html <- function(adjacency = NULL, nodelist = NULL, savenet = FALSE, 
                            filmtitle = "", edgelabs = FALSE, 
                            filename = "My visnet.html") {
-  library(igraph, warn.conflicts = FALSE, quietly = TRUE)
-  library(visNetwork, quietly = TRUE)
-  g <- graph_from_adjacency_matrix(my.adj, weighted=TRUE, diag=FALSE)
-  eg <- get.edgelist(g, names = FALSE)
+  g <- igraph::graph_from_adjacency_matrix(adjacency, weighted = TRUE, 
+                                           diag = FALSE)
+  eg <- igraph::get.edgelist(g, names = FALSE)
   
   # To create 'Links'
-  numchars <- nrow(nodelist)
+  numlines <- nrow(nodelist)
   ew <- vector("numeric", nrow(eg))
-  for (i in 1:numchars)
-  {
-    for (j in 1:numchars)
-    {
-      for (k in 1:nrow(eg))
-        if (eg[k,1]==i & eg[k,2]==j){
-          ew[k] <- sqrt(my.adj[i,j])/10
-        } else { next } }
+  for (i in 1:numlines) {
+    for (j in 1:numlines) {
+      for (k in 1:nrow(eg)) {
+        if (eg[k, 1] == i & eg[k, 2] == j) {
+          ew[k] <- sqrt(adjacency[i, j]) / 10
+        } else { next } 
+      }
+    }
   }
   vislinks <- cbind.data.frame(eg, ew)
-  if(edgelabs==TRUE){
-    colnames(vislinks) <- c("from", "to", "title")} else {
-      colnames(vislinks) <- c("from", "to", "Strength")
-    }
+  if(edgelabs == TRUE) {
+    colnames(vislinks) <- c("from", "to", "title") 
+    } else { colnames(vislinks) <- c("from", "to", "Strength") }
   
   # To create 'Nodes'
-  nodetitle <- vector("character", max(nodelist$characterID))
+  nodetitle <- vector("character", max(nodelist$char_ID))
   for (c in 1:nrow(nodelist)) {
-    nodetitle[c] <- paste0("Character: ", nodelist$character.name[c],
+    nodetitle[c] <- paste0("Character: ", nodelist$char_name[c],
                            "<br />Gender: ", nodelist$gender[c], 
                            "<br />No. lines: ", nodelist$nlines[c], 
                            "<br />No. times spoken to: ", nodelist$linesin[c])
   }
-  visnodes <- cbind.data.frame("id" = nodelist$characterID, 
-                               "label" = nodelist$character.name,
+  visnodes <- cbind.data.frame("id" = nodelist$char_ID, 
+                               "label" = nodelist$char_name,
                                "value" = nodelist$nlines, "title" = nodetitle,
                                "group" = nodelist$gender)
   
   #Generate the network object
   visnet <- visNetwork(nodes = visnodes, edges = vislinks,  
-                       main=list(text=paste0("Character interactions in ", 
+                       main = list(text = paste0("Character interactions in ", 
                                              filmtitle), 
-                                 style="font-family:palatino;font-size:20px; 
+                                 style = "font-family:palatino;font-size:20px; 
                                   text-align:center;")) %>%
     visInteraction(hover = TRUE, hoverConnectedEdges = TRUE, 
                    multiselect = TRUE) %>%
-    visGroups(groupname = "Female", color = 
-                list(background="#F0D72A", border="#9A9158", 
-                     highlight="#EDC825", hover="#FBD738")) %>%
-    visGroups(groupname = "Male", color = 
-                list(background="#075EC3", border="#172C76", 
-                     highlight="#1075EA", hover="#2586F6")) %>%
+    visGroups(groupname = "Female", color = list(background="#F0D72A", 
+                                                 border="#9A9158", 
+                                                 highlight="#EDC825", 
+                                                 hover="#FBD738")) %>%
+    visGroups(groupname = "Male", color = list(background="#075EC3", 
+                                               border="#172C76", 
+                                               highlight="#1075EA", 
+                                               hover="#2586F6")) %>%
     visEdges(arrows = list(to = list(enabled = TRUE, scaleFactor = 0.5)))
-  if (savenet==TRUE) {
+  if (savenet == TRUE) {
     visSave(visnet, file = filename)
   }
   visnet
 }
 ```
 
-```{r message=FALSE, fig.width=8, fig.height=5}
-plot.film.html(filmtitle="Frozen (2013)")
+```{r message = FALSE, fig.width = 8, fig.height = 5}
+plot_film_html(adjacency = frozen$adjacency, nodelist = frozen$node_list, 
+             filmtitle = "Frozen (2013)")
 ```
 
 ## Creating a pipeline  
@@ -347,20 +381,20 @@ The purpose of this walkthrough is to illustrate how the functions are defined
 and what they do. A more practical workflow would involve defining the functions 
 in a separate source script, so that they can be called from a more streamlined analysis pipeline for any new data.  
 
-For example, let's say we have stored `read.film`, `check.for.errors`, `film.summary`, `film.summary.gender`, `plot.film.gg`, `plot.film.basic`, and `plot.film.html` in a script called `"film-functions.R"`. Then the entire 
-analysis pipeline for any particular film we want to analyse might simply look something like this:
+For example, let's say we have stored `qread_film`, `check_for_errors`, `film_summary`, `film_summary_gender`, `plot_film_gg`, `plot_film_basic`, and `plot_film_html` in a script called `"film-functions.R"`. Then the entire analysis pipeline for any particular film we want to analyse might simply look something like this:
 
-```{r eval=FALSE}
+```{r eval = FALSE}
 source("film-functions.R")
 # Read in film data----
-read.film("data/myfilmlines.csv", "data/myfilmedges.csv")
-check.for.errors()
+qread_film("data/myfilmlines.csv", "data/myfilmchars.csv")
+check_for_errors(data$adjacency, data$event_list)
 # Describe the film----
-film.net.summary()
+film_summary(data$event_list)
+film_summary_gender(data$node_list)
 # Plot the network----
-plot.film.basic(filmtitle = "Film title here")
-plot.film.gg(filmtitle = "Film title here")
-plot.film.html(filmtitle = "Film title here")
+plot_film_basic(data$adjacency, data$node_list, filmtitle = "Film title here")
+plot_film_gg(data$adjacency, data$node_list, filmtitle = "Film title here")
+plot_film_html(data$adjacency, data$node_list, filmtitle = "Film title here")
 ```
 
 This way, we can reproduce every step of the analysis performed in this notebook 
