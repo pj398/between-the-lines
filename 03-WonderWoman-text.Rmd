@@ -126,6 +126,18 @@ Now we can take a quick look at the data:
 knitr::kable(linedata[1:6, ])
 ```
 
+Does using lines (which can be of different lengths) as the unit of dialogue paint an accurate picture of how much characters say? To check this we can look at whether the gendered distribution of words spoken differs from the gendered distribution of lines spoken:
+
+```{r}
+# Subset the data into female-spoken lines and male-spoken lines
+femalelines <- linedata[which(linedata$speakergen == "Female"), ]
+malelines <- malelines <- linedata[which(linedata$speakergen == "Male"), ]
+# Calculate the proportion of words spoken by women
+sum(femalelines$nwords) / (sum(femalelines$nwords) + sum(malelines$nwords))
+```
+
+So women speak only 40% of the words in the film, despite speaking 43% of the lines.
+
 ## Data preprocessing
 
 One of the steps in most data preprocessing pipelines for text analysis is the definition of stopwords. Stopwords are words which are of no interest and are usually made up of common building block words such as 'the', 'and' etc., whose purpose is grammatical rather than semantic. `quanteda` imports the `stopwords::stopwords` function, which uses the pre-defined [Stopwords ISO library](https://github.com/stopwords-iso). This library, like most stopwords libraries, excludes gender pronouns (e.g. 'he', 'she') from the analysis. However, given our interest in the capacity for female characters to be defined in ways which are indepdenent of relations with men, it would be more interesting to leave these gendered pronouns in the analysis.
