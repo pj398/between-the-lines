@@ -56,8 +56,8 @@ Let me know if I can be of any help.
 
 ## Contact
 
-E-mail: <petejonesphd@gmail.com>  
-Twitter: <a href="https://twitter.com/pj_mcr">@pj_mcr</a>
+E-mail: <pete@petejon.es> Twitter:
+<a href="https://twitter.com/pj_mcr">@pj_mcr</a>
 
 ## License
 

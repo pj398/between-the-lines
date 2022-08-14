@@ -1,7 +1,0 @@
-Please reference this work using the Github repository for now:
-
-  Jones, Pete. 2019. Between the Lines. 
-  https://github.com/pj398/between-the-lines.
-
-Once research outputs currently pending publication become available, I will update this file 
-accordingly as those publications will be more appropriate citations.
